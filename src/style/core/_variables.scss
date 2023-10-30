@@ -1,0 +1,10 @@
+// ===== main colors =====
+$brand: #0d0d0d;
+
+// ===== text colors =====
+$text: #f5f5f5;
+$fff: #d9910d;
+
+// ===== link colors =====
+$link: lighten($text, 10%);
+$link-hov: lighten($text, 25%);

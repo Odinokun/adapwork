@@ -1,0 +1,86 @@
+extends ../_template
+
+mixin inner-mixin__item(bgImg, itemTitle, newclass)
+  //-.inner-mixin__item(style="height: 200px; width: 18%; border: 1px solid #693;text-align:center;display:inline-block;")
+  .inner-mixin__item
+    .inner-mixin__pic(style= 'background-image:url(assets/img/' + bgImg + '.png);')
+    div(class='services__icon services__icon--' + newclass + '')
+    h3.inner-mixin__title #{itemTitle}
+
+block variables
+  - let title           = 'Inner'
+  - let description     = ''
+
+  - let breadcrumbs     = 'breadcrumbs link'
+
+block content
+  .main-wrap.no-js.inner
+    include ../sections/header
+
+    //begin content
+    main.main
+      .container
+        br
+        //begin inner-video
+        .inner-video
+          .inner-video__item
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/A7U527zhAvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          .inner-video__item
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/A7U527zhAvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          .inner-video__item
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/A7U527zhAvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        //end inner-video
+
+        //begin inner-mixin
+        .inner-mixin
+          +inner-mixin__item('favicon', 'hello world 1', 'class1')
+          +inner-mixin__item('favicon', 'hello world 2', 'class2')
+          +inner-mixin__item('favicon', 'hello world 3', 'class3')
+        //end inner-mixin
+
+        //begin inner-picture
+        .inner-picture
+          picture.inner-picture__item
+            source(srcset="assets/img/favicon.png" media="(min-width: 768px)")
+            source(srcset="assets/img/favicon.png")
+            img(src="assets/img/favicon.png" alt="pic")
+          picture.inner-picture__item
+            source(srcset="assets/img/favicon.png" media="(min-width: 768px)")
+            source(srcset="assets/img/favicon.png")
+            img(src="assets/img/favicon.png" alt="pic")
+          picture.inner-picture__item
+            source(srcset="assets/img/favicon.png" media="(min-width: 768px)")
+            source(srcset="assets/img/favicon.png")
+            img(src="assets/img/social.jpg" alt="pic")
+        //end inner-picture
+
+        //begin inner-texts
+        .inner-texts
+          h1 Заголовок 1
+          h2 Заголовок 2
+          h3 Заголовок 3
+          h4 Заголовок 4
+          h5 Заголовок 5
+          h6 Заголовок 6
+          p Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. С другой стороны сложившаяся структура организации требуют от нас анализа направлений прогрессивного развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Равным образом укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.
+          p
+            | Равным образом дальнейшее развитие различных форм деятельности играет важную роль в
+            =" "
+            a(href="#") формировании форм развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют определения
+            =" "
+            | прогрессивного развития. Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки модели развития. Задача организации, в особенности же реализация намеченных плановых заданий позволяет оценить значение форм развития. Разнообразный и богатый опыт реализация намеченных плановых заданий в значительной степени обуславливает создание новых предложений.
+        //end inner-texts
+
+        //begin inner-btns
+        .inner-btns
+          .inner-btn__item
+            a(href="#").inner-btn Отправить
+          .inner-btn__item
+            button.inner-btn Отправить
+          .inner-btn__item
+            input(type='submit' value='Отправить').inner-btn
+        //end inner-btns
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

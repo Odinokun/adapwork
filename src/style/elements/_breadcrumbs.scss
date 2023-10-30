@@ -1,0 +1,35 @@
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  list-style: none;
+  &::after {
+    font-size: 14px;
+    margin: 0 3px 0 4px;
+    content: '/';
+    color: $text;
+  }
+  &:last-child {
+    .breadcrumbs__link {
+      text-decoration: none;
+      pointer-events: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  font-size: 14px;
+  white-space: nowrap;
+  color: $text;
+  &:hover {
+    text-decoration: none;
+  }
+}

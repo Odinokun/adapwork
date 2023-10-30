@@ -1,0 +1,31 @@
+include elements/_mixins
+block variables
+
+doctype html
+html(lang="uk")
+  head
+    meta(charset="utf-8")
+    title #{title}
+
+    meta(name="description" content= description)
+
+    // begin responsive
+    meta(name="viewport"              content="width=device-width, initial-scale=1")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    // end responsive
+
+    link(rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.png')
+
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet")
+
+    link(rel='stylesheet' href='assets/css/foundation.css')
+    link(rel='stylesheet' href='assets/css/app.css')
+
+    meta(name='theme-color', content='#0d0d0d')
+
+    //[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]
+
+  body
+    block content

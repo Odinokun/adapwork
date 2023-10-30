@@ -1,0 +1,57 @@
+// ===== responsive =====
+@mixin max($width) {
+  @media screen and (max-width: $width + 'px') {
+    @content;
+  }
+}
+
+@mixin min($width) {
+  @media screen and (min-width: $width + 'px') {
+    @content;
+  }
+}
+
+// ===== ol style =====
+@mixin counter($var) {
+  counter-reset: $var;
+  & > li::before {
+    content: counter($var) ') ';
+    counter-increment: $var;
+  }
+}
+
+// ===== placeholder style =====
+@mixin placeholder-color($color) {
+  opacity: 1;
+  /* Chrome/Opera/Safari */
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    color: $color;
+  }
+  /* Firefox 19+ */
+  &::-moz-placeholder {
+    opacity: 1;
+    color: $color;
+  }
+  /* IE 10+ */
+  &:-ms-input-placeholder {
+    opacity: 1;
+    color: $color;
+  }
+  /* Firefox 18- */
+  &:-moz-placeholder {
+    opacity: 1;
+    color: $color;
+  }
+}
+
+// ===== responsive font =====
+@mixin responsive-font($pcSize, $mobSize) {
+  $maxWidth: 1680; //контейнер
+  $addSize: $pcSize - $mobSize; //разница в размере
+  $maxWidth: $maxWidth - 320; //разница в контейнерах
+  font-size: $pcSize + px; //размер на десктопе
+  @media (max-width: 1680px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+}

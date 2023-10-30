@@ -1,0 +1,19 @@
+extends ../_template
+
+block variables
+  - let title       = 'Index'
+  - let description = ''
+
+  - let breadcrumbs     = 'breadcrumbs link'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+
+    //begin content
+    main.main
+    //end content
+
+    //-include ../elements/scrollUp
+    include ../sections/footer
+    include ../sections/scripts
