@@ -5,6 +5,7 @@
 @import 'core/typography';
 
 //elements
+@import 'elements/mobile-menu';
 //@import 'elements/burger';
 //@import 'elements/scrollUp';
 //@import 'elements/breadcrumbs';
@@ -13,8 +14,15 @@
 //@import 'elements/slickBase';
 
 //section
-//@import 'sections/header';
-//@import 'sections/footer';
+@import 'sections/header/header';
+@import 'sections/header/header-models';
+@import 'sections/header/header-nav';
+@import 'sections/header/header-langs';
+@import 'sections/header/header-cart';
+
+@import 'sections/footer';
+
+@import "sections/home-page/hero";
 
 //pages
 //@import 'pages/index';
