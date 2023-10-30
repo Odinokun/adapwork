@@ -1,19 +1,17 @@
 extends ../_template
 
 block variables
-  - let title       = 'Index'
-  - let description = ''
-
-  - let breadcrumbs     = 'breadcrumbs link'
+  - let title       = 'Adapwork'
+  - let description = 'Adapwork website'
 
 block content
-  .main-wrap.no-js
+  .main-wrap
     include ../sections/header
 
     //begin content
     main.main
+      include ../sections/home-page/hero
     //end content
 
-    //-include ../elements/scrollUp
     include ../sections/footer
     include ../sections/scripts
