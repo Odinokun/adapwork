@@ -1,0 +1,146 @@
+.about-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @include min(768) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  @include min(1200) {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+}
+
+.about__text {
+  font-weight: 600;
+  line-height: 1.05;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-bottom: 0;
+  letter-spacing: -1.44px;
+  outline: 1px solid red;
+
+  @include responsive-font(70, 32);
+  @include min(768) {
+    letter-spacing: -2.2px;
+  }
+  @include min(1200) {
+    letter-spacing: -3.2px;
+  }
+}
+
+.about-section__images {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(2200px + 100vh);
+}
+
+.about-section__images--down {
+  z-index: 1;
+}
+
+.about-section__images--up {
+  z-index: 3;
+}
+
+.about-section__image {
+  position: absolute !important;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.about-section__image--lg {
+  width: 100px;
+
+  @include min(768) {
+    width: 140px;
+  }
+  @include min(1200) {
+    width: 200px;
+  }
+  @include min(1440) {
+    width: 240px;
+  }
+}
+
+.about-section__image--sm {
+  width: 70px;
+
+  @include min(768) {
+    width: 100px;
+  }
+  @include min(1200) {
+    width: 140px;
+  }
+  @include min(1440) {
+    width: 180px;
+  }
+}
+
+.about-section__images--down .about-section__image {
+  &:nth-child(1) {
+    top: 100vh;
+    left: 48%;
+    //outline: 1px solid green;
+  }
+
+  &:nth-child(2) {
+    top: calc(100vh + 25%);
+    //outline: 1px solid violet;
+    right: 10px;
+
+    @include min(768) {
+      right: 20px;
+    }
+    @include min(1024) {
+      right: 32px;
+    }
+    @include min(1200) {
+      right: 10%;
+    }
+  }
+
+  &:nth-child(3) {
+    z-index: 5;
+    right: 50%;
+    bottom: 0;
+    //outline: 1px solid saddlebrown;
+  }
+}
+
+.about-section__images--up .about-section__image {
+  &:nth-child(1) {
+    top: calc(100vh + 15%);
+    //outline: 5px solid red;
+    left: 10px;
+
+    @include min(768) {
+      left: 20px;
+    }
+    @include min(1024) {
+      left: 32px;
+    }
+    @include min(1200) {
+      left: 7%;
+    }
+  }
+
+  &:nth-child(2) {
+    top: calc(100vh + 40%);
+    left: 30%;
+    //outline: 5px solid blue;
+  }
+
+  &:nth-child(3) {
+    right: 26%;
+    bottom: 15%;
+    //outline: 5px solid yellow;
+  }
+}
