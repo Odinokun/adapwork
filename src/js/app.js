@@ -4,6 +4,7 @@ $(function() {
   require('./modules/select')();
   require('./modules/header-bg')();
   require('./modules/menu')();
+  require('./modules/animate-text')();
 
   // require('./modules/scrollUp')();
   // require('./modules/noJs')();
