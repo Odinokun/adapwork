@@ -58,20 +58,16 @@ module.exports = function () {
   });
   // END IMAGES ANIMATION
 
-
-
-
-
-  // gsap.to('.certificated-by', {
-  //   opacity: 1,
-  //   duration: 0.5,
-  //   scrollTrigger: {
-  //     trigger: '.certificated-by',
-  //     start: '60% bottom',
-  //     scrub: true,
-  //     once: true,
-  //   },
-  // });
+  gsap.to('.bifma', {
+    opacity: 1,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: '.bifma',
+      start: '150% bottom',
+      scrub: true,
+      once: true,
+    },
+  });
 
 
 

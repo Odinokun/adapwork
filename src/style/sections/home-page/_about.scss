@@ -1,6 +1,7 @@
 .about-section {
   padding-top: 90px;
   padding-bottom: 90px;
+  min-height: 100vh;
 
   @include min(768) {
     padding-top: 120px;
@@ -18,15 +19,16 @@
   position: relative;
   z-index: 2;
   display: block;
-  margin-bottom: 0;
+  margin-bottom: 90px;
   letter-spacing: -1.44px;
-  outline: 1px solid red;
 
   @include responsive-font(70, 32);
   @include min(768) {
+    margin-bottom: 120px;
     letter-spacing: -2.2px;
   }
   @include min(1200) {
+    margin-bottom: 160px;
     letter-spacing: -3.2px;
   }
 }
@@ -57,7 +59,7 @@
 }
 
 .about-section__image--lg {
-  width: 100px;
+  width: 120px;
 
   @include min(768) {
     width: 140px;
@@ -71,7 +73,7 @@
 }
 
 .about-section__image--sm {
-  width: 70px;
+  width: 80px;
 
   @include min(768) {
     width: 100px;
@@ -144,3 +146,48 @@
     //outline: 5px solid yellow;
   }
 }
+
+/* begin bifma */
+.bifma {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+
+  @include min(1024) {
+    flex-direction: row;
+  }
+  @include min(1440) {
+    align-items: center;
+  }
+}
+
+.bifma__cert {
+  flex: none;
+  width: 220px;
+  margin-bottom: 20px;
+
+  @include min(1024) {
+    margin-right: 45px;
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bifma__text {
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.8px;
+
+  @include min(1024) {
+    letter-spacing: -1.28px;
+  }
+  @include responsive-font(32, 20);
+}
+
+/* end   bifma */
