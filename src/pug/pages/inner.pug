@@ -18,8 +18,53 @@ block content
     include ../sections/header
 
     //begin content
-    main.main
+    main.main(style="background-color: lightblue;")
       .container
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        h2 base
+        //begin inner-btns
+        .inner-btns
+          a(href="#").btn explore collection
+          button.btn explore collection
+          input(type='submit' value='explore collection').btn
+        //end inner-btns
+        br
+        h2 DARK
+        //begin inner-btns
+        .inner-btns
+          a(href="#").btn.btn--dark explore collection
+          button.btn.btn--dark explore collection
+          input(type='submit' value='explore collection').btn.btn--dark
+        //end inner-btns
+        br
+        h2 GHOST
+        //begin inner-btns
+        .inner-btns
+          a(href="#").btn.btn--ghost explore collection
+          button.btn.btn--ghost explore collection
+          input(type='submit' value='explore collection').btn.btn--ghost
+        //end inner-btns
+        br
+        br
+        h2 DISABLED
+        .inner-btns
+          a(href="#").btn.disabled explore collection
+          button.btn.disabled explore collection
+          input(type='submit' value='explore collection').btn.disabled
+          a(href="#").btn.btn--dark.disabled explore collection
+          button.btn.btn--dark.disabled explore collection
+          input(type='submit' value='explore collection').btn.btn--dark.disabled
+          a(href="#").btn.btn--ghost.disabled explore collection
+          button.btn.btn--ghost.disabled explore collection
+          input(type='submit' value='explore collection').btn.btn--ghost.disabled
+        //end inner-btns
+
         br
         //begin inner-video
         .inner-video
@@ -71,15 +116,7 @@ block content
             | прогрессивного развития. Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки модели развития. Задача организации, в особенности же реализация намеченных плановых заданий позволяет оценить значение форм развития. Разнообразный и богатый опыт реализация намеченных плановых заданий в значительной степени обуславливает создание новых предложений.
         //end inner-texts
 
-        //begin inner-btns
-        .inner-btns
-          .inner-btn__item
-            a(href="#").inner-btn Отправить
-          .inner-btn__item
-            button.inner-btn Отправить
-          .inner-btn__item
-            input(type='submit' value='Отправить').inner-btn
-        //end inner-btns
+
     //end content
 
     include ../sections/footer
