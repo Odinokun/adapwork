@@ -68,41 +68,11 @@
 
 //begin #BUTTONS
 .inner-btns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 30px;
-  margin: 30px 0;
+display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.inner-btn__item {
-  display: flex;
-  justify-content: center;
-}
-
-.inner-btn {
-  font-family: 'OpenSans', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 30px;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color $transition-hover;
-  white-space: nowrap;
-  text-decoration: none;
-  color: #fff;
-  border: none;
-  border-radius: 50px !important;
-  background-color: darkgreen;
-  box-shadow: none;
-  &:hover {
-    color: #fff;
-    background-color: darken(darkgreen, 10%);
-  }
-}
 
 //end #BUTTONS
 
