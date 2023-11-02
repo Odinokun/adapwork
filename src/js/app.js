@@ -6,6 +6,7 @@ $(function() {
   require('./modules/menu')();
   require('./modules/animate-text')();
   require('./modules/swiper')();
+  require('./modules/scrollbar')();
 
   // require('./modules/scrollUp')();
   // require('./modules/noJs')();

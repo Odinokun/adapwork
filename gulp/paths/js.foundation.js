@@ -6,6 +6,7 @@ module.exports = [
   './node_modules/swiper/swiper-bundle.js',
   './node_modules/gsap/dist/gsap.js',
   './node_modules/gsap/dist/ScrollTrigger.js',
+  './node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js'
   // './node_modules/split-type/dist/index.js'
 
   // './src/vendors/jquery-ui/jquery-ui.min.js',
