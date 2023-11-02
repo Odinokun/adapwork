@@ -51,6 +51,7 @@ p {
   font-weight: 500;
   line-height: 1.3;
   text-transform: uppercase;
+
   @include responsive-font(14, 12);
 }
 

@@ -65,8 +65,8 @@ svg {
 }
 
 .main {
-  background-color: #0d0d0d;
   flex-grow: 1;
+  background-color: #0d0d0d;
 }
 
 .wrapper {
@@ -80,9 +80,4 @@ svg {
   @include min(1024) {
     padding: 0 32px;
   }
-}
-
-.temp-section{
-  height: 130vh;
-  background-color: lightblue;
 }
