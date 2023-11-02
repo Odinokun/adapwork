@@ -35,10 +35,11 @@ p {
 }
 
 .h3 {
-  font-size: 32px;
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -1.28px;
+
+  @include responsive-font(32, 20);
 }
 
 .h4 {
