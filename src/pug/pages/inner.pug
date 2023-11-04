@@ -27,7 +27,52 @@ block content
         br
         br
         br
+        label.switcher
+          input(type='checkbox' name='build' checked)
+          .switcher__field
+          .b-s.switcher__text Безкоштовно *
+        br
+        br
+        br
+        br
+        br
+        br
+        br
         h2 base
+
+        .checkout-personal__content
+          .input
+            label.custom__label Ваше ім’я *
+            .custom__field-wrapper
+              input(type='text' placeholder='Ваше ім’я').custom__field
+            .custom__error Поле не може бути пустим
+          .input.error
+            label.custom__label Ваше ім’я *
+            .custom__field-wrapper
+              input(type='text' placeholder='Ваше ім’я').custom__field
+            .custom__error Поле не може бути пустим
+
+          .select
+            label.custom__label Ваше ім’я *
+            .custom__field-wrapper
+              select.custom__field
+                option(value='placeholder') Номер відділення *
+                option(value='#') LoremipsumdolorsitLoremipsumdolorsitLoremipsumdolorsit.
+                option(value='#') Номер #2
+                option(value='#') Номер #3
+            .custom__error Поле не може бути пустим
+
+          .select
+            label.custom__label Ваше ім’я *
+            .custom__field-wrapper
+              select.custom__field(required)
+                option(value='placeholder') Номер відділення *
+                option(value='#') Номер #1
+                option(value='#') Номер #2
+                option(value='#') Номер #3
+            .custom__error Поле не може бути пустим
+
+
         //begin inner-btns
         .inner-btns
           a(href="#").btn explore collection

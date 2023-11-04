@@ -1,0 +1,28 @@
+.checkout-header {
+  padding-top: 140px;
+  padding-bottom: 30px;
+}
+
+.checkout-content {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 60px;
+
+  @include min(1024) {
+    padding-bottom: 120px;
+  }
+}
+
+.checkout-content__left {
+  width: 50%;
+  min-width: 700px;
+  margin-right: auto;
+}
+
+.checkout-content__left-footer {
+  padding-top: 50px;
+
+  .btn {
+    width: 100%;
+  }
+}

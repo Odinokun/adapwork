@@ -24,6 +24,8 @@
     background-color: #fff;
   }
 
+  &:disabled,
+  &[disabled],
   &.disabled {
     pointer-events: none;
     color: #6c6c6c;

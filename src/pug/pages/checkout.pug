@@ -1,0 +1,39 @@
+extends ../_template
+
+block variables
+  - let title       = 'Adapwork'
+  - let description = 'Adapwork website'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      //begin checkout-header
+      .checkout-header.wrapper
+        h1.h1.checkout-header__title Корзина
+      //end checkout-header
+
+      //begin checkout-content
+      .checkout-content.wrapper
+        //begin checkout-content__left
+        form.checkout-content__left
+          include ../sections/checkout/checkout-personal
+          include ../sections/checkout/checkout-order
+          include ../sections/checkout/checkout-delivery
+          include ../sections/checkout/checkout-payment
+
+          .checkout-content__left-footer
+            button(disabled).btn Підтвердити замовлення
+
+        //end checkout-content__left
+        include ../sections/checkout/checkout-total
+      //end checkout-content
+
+
+      include ../sections/home-page/inst
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
