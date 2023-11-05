@@ -1,11 +1,17 @@
 .checkout-total {
-  position: sticky;
-  top: 130px;
-  overflow: auto;
-  flex: none;
-  min-width: 390px;
-  max-height: calc(100vh - 150px);
-  width: 25%;
+  width: 100%;
+  margin-top: 60px;
+
+  @include min(1200) {
+    position: sticky;
+    top: 130px;
+    overflow: auto;
+    flex: none;
+    width: 25%;
+    min-width: 390px;
+    max-height: calc(100vh - 150px);
+    margin-top: 0;
+  }
 }
 
 .checkout-total__top {

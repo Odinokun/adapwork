@@ -30,17 +30,25 @@
 }
 
 .checkout-delivery__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 64px 1fr 1fr;
+  grid-template-areas: 'img title price'
+  'img descr price';
   width: 100%;
   border: 1px solid #1b1b1b;
   border-radius: 4px;
   background-color: #121212;
+
+  @include min(768) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .checkout-delivery__item-img {
   display: flex;
+  grid-area: img;
   justify-content: center;
   align-items: center;
   flex: none;
@@ -57,19 +65,33 @@
 }
 
 .checkout-delivery__item-title {
-  width: calc(50% - 48px);
-  padding-right: 30px;
-  padding-left: 30px;
+  grid-area: title;
+  padding: 16px 16px 4px 16px;
   transition: all .3s ease;
   color: #4d4d4d;
+
+  @include min(768) {
+    width: calc(50% - 48px);
+    padding: 0 30px;
+  }
 }
 
 .checkout-delivery__item-descr {
+  grid-area: descr;
   flex: 1;
+  padding: 0 16px 16px 16px;
   color: #4d4d4d;
+
+  @include min(768) {
+    padding: 0;
+  }
 }
 
 .checkout-delivery__item-price {
+  display: flex;
+  grid-area: price;
+  flex-direction: column;
+  justify-content: center;
   flex: none;
   padding-right: 24px;
   padding-left: 16px;
@@ -96,6 +118,8 @@
   flex-wrap: wrap;
 
   .select {
-    width: calc(50% - 15px);
+    @include min(768) {
+      width: calc(50% - 15px);
+    }
   }
 }

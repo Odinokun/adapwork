@@ -8,6 +8,8 @@
   flex-wrap: wrap;
 
   .input {
-    width: calc(50% - 15px);
+    @include min(768) {
+      width: calc(50% - 15px);
+    }
   }
 }

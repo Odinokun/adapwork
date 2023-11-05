@@ -14,9 +14,13 @@
 
 .checkout-payment__item {
   position: relative;
-  width: calc(25% - 10px);
+  width: calc(50% - 10px);
   margin-right: 10px;
   margin-bottom: 10px;
+
+  @include min(768) {
+    width: calc(25% - 10px);
+  }
 
   input {
     position: absolute;

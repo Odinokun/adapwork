@@ -4,8 +4,11 @@ module.exports = function () {
   $(window).on("load", function () {
     //index page
     $('.seo__container').mCustomScrollbar();
+
     //checkout page
-    $('.checkout-total').mCustomScrollbar();
+    if (window.innerWidth >= 1200) {
+      $('.checkout-total').mCustomScrollbar();
+    }
   });
 
 };
