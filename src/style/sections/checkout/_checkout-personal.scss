@@ -1,0 +1,15 @@
+.checkout-personal__title {
+  margin-bottom: 20px;
+}
+
+.checkout-personal__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .input {
+    @include min(768) {
+      width: calc(50% - 15px);
+    }
+  }
+}

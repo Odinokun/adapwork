@@ -7,6 +7,8 @@
 //elements
 @import 'elements/btns';
 @import 'elements/mobile-menu';
+@import 'elements/custom-fields';
+@import 'elements/switcher';
 //@import 'elements/burger';
 //@import 'elements/scrollUp';
 //@import 'elements/breadcrumbs';
@@ -31,5 +33,11 @@
 @import "sections/home-page/seo";
 @import "sections/home-page/inst";
 
+@import "sections/checkout/checkout-total";
+@import "sections/checkout/checkout-personal";
+@import "sections/checkout/checkout-order";
+@import "sections/checkout/checkout-delivery";
+@import "sections/checkout/checkout-payment";
+
 //pages
-//@import 'pages/index';
+@import 'pages/checkout';

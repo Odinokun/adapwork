@@ -1,0 +1,56 @@
+mixin item(img, title)
+  //begin checkout-order__item
+  .checkout-order__item
+    .checkout-order__item-img
+      img(src='assets/img/order-' + img + '.jpg' alt='checkout-order')
+
+    .checkout-order__item-descr
+      .b-m-sb.checkout-order__item-descr-title= title
+      .b-sb.checkout-order__item-descr-text
+        span Чорний
+        span SKU: AWS10008
+
+    .checkout-order__item-build
+      .b-sb.checkout-order__item-build-title Потрiбна збiрка?
+      .checkout-order__item-build-choise
+        label.switcher
+          input(type='checkbox' name='build' checked)
+          .switcher__field
+          .b-s.switcher__text Безкоштовно *
+
+    .checkout-order__item-quantity
+      .counter
+        button.counter__btn.counter__btn--minus –
+        input.counter__input(type='text' value='1' readonly)
+        button.counter__btn.counter__btn--plus +
+
+    .checkout-order__item-price
+      .b-s.checkout-order__item-price-one $399/item
+      .b-m-sb.checkout-order__item-price-all $399.00
+
+    .checkout-order__item-delete
+      .checkout-order__item-delete-icon
+        +svg('delete')
+  //end checkout-order__item
+
+//begin checkout-order
+.checkout-order
+  h4.h4.checkout-order__title Замовлення:
+
+  .checkout-order__content-header
+    .checkout-order__content-header-img
+    .checkout-order__content-header-descr Товар
+    .checkout-order__content-header-build сбIрка
+    .checkout-order__content-header-counter Кількість
+    .checkout-order__content-header-price Сума
+    .checkout-order__content-header-delete Видалити
+
+  //begin checkout-order__content
+  .checkout-order__content
+    +item('01', 'Senior S1 Mesh ErgoChair')
+    +item('02', '5 pieces SET of rubberized rollers ADAPWORK CASTORS 75 FIX Transparent')
+  //end checkout-order__content
+
+  .checkout-order__content-footer
+    .b-s * Можливо при доставці нашою службою kupistul.ua
+//end checkout-order
