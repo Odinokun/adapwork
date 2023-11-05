@@ -55,10 +55,6 @@
 
 /* end   header */
 
-.checkout-order__content {
-  border-top: 1px solid #1b1b1b;
-}
-
 /* begin ITEM */
 .checkout-order__item {
   position: relative;
@@ -72,6 +68,10 @@
 
   @include min(768) {
     display: flex;
+  }
+
+  &:first-child {
+    border-top: 1px solid #1b1b1b;
   }
 }
 
@@ -107,6 +107,14 @@
 
 .checkout-order__item-descr-title {
   margin-bottom: 8px;
+}
+
+.checkout-order__item-descr-label {
+  align-self: flex-start;
+  margin-top: 12px;
+  padding: 4px 8px;
+  border: 1px dashed #4d4d4d;
+  border-radius: 2px;
 }
 
 //build
