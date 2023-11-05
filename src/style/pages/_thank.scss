@@ -1,0 +1,134 @@
+.thank {
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 100vh;
+
+  @include min(1024) {
+    flex-direction: row;
+  }
+}
+
+.thank__item {
+  width: 100%;
+  min-height: 420px;
+
+  @include min(1024) {
+    width: 50%;
+  }
+}
+
+.thank-left {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-image: url('../img/bg-thank.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include min(768) {
+    width: calc(100% - 40px);
+    background-image: url('../img/bg-thank@2x.jpg');
+  }
+  @include min(1024) {
+    width: 50%;
+    padding: 160px 32px 40px 32px;
+    border-radius: 0;
+  }
+}
+
+.thank-left__subtitle {
+  max-width: 250px;
+  margin-top: auto;
+}
+
+.thank-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 10px 30px 10px;
+
+  @include min(768) {
+    padding: 90px 20px 30px 20px;
+  }
+  @include min(1024) {
+    padding: 160px 32px 40px 32px;
+  }
+}
+
+.thank-right__content {
+  @include min(1440) {
+    max-width: 66%;
+  }
+}
+
+.thank-right__title {
+  margin-bottom: 24px;
+}
+
+.thank-right__text {
+  margin-bottom: 32px;
+}
+
+.thank {
+  .checkout-order__item {
+    display: flex;
+  }
+
+  .checkout-order__item-price {
+    justify-content: flex-end;
+    padding-left: 0;
+
+    @include min(768) {
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+}
+
+.thank-right__orders-footer {
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: right;
+  border-top: 2px solid #f5f5f5;
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: #f5f5f5;
+  }
+}
+
+.thank-right__details-row {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 2px solid #1b1b1b;
+
+  &:first-child {
+    border-top: 2px solid #1b1b1b;
+  }
+
+  span {
+    &:nth-child(1) {
+      width: 25%;
+      min-width: 100px;
+
+      @include min(768) {
+        min-width: 140px;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 75%;
+    }
+  }
+}

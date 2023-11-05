@@ -1,0 +1,76 @@
+extends ../_template
+
+block variables
+  - let title       = 'Adapwork'
+  - let description = 'Adapwork website'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      .thank
+        //begin thank-left
+        .thank__item.thank-left
+          h1.h1.thank-left__title Дякуемо.
+          h3.h3.thank-left__subtitle Together we’re moving to victory
+        //end thank-left
+
+        //begin thank-right
+        .thank__item.thank-right
+          .thank-right__content
+            h3.h3.thank-right__title Ваше замовлення вже в дорозі
+            .b-m.thank-right__text Якщо за 5 хвилин ви не отримаєте автоматичного листа з підтвердженням на ваш email, наберіть нас за номером 0 (44) 360 87 89 – швидко вирішимо це питання!
+            //begin thank-right__orders
+            .thank-right__orders
+              //begin checkout-order__item
+              .checkout-order__item
+                .checkout-order__item-img
+                  img(src='assets/img/order-01.jpg' alt='checkout-order')
+
+                .checkout-order__item-descr
+                  .b-m-sb.checkout-order__item-descr-title Senior S1 Mesh ErgoChair
+                  .b-sb.checkout-order__item-descr-text Чорний SKU: AWS10008
+                  .b-sb.checkout-order__item-descr-label Безкоштовна доставка
+
+                .checkout-order__item-price
+                  .b-s.checkout-order__item-price-one $399/item
+                  .b-m-sb.checkout-order__item-price-all $399.00
+              //end checkout-order__item
+              //begin checkout-order__item
+              .checkout-order__item
+                .checkout-order__item-img
+                  img(src='assets/img/order-02.jpg' alt='checkout-order')
+
+                .checkout-order__item-descr
+                  .b-m-sb.checkout-order__item-descr-title 5 pieces SET of rubberized rollers ADAPWORK CASTORS 75 FIX Transparent
+                  .b-sb.checkout-order__item-descr-text Чорний SKU: AWS10008
+
+                .checkout-order__item-price
+                  .b-s.checkout-order__item-price-one $399/item
+                  .b-m-sb.checkout-order__item-price-all $399.00
+              //end checkout-order__item
+              .thank-right__orders-footer
+                .h4 $438.00
+            //end thank-right__orders
+
+            //begin thank-right__details
+            .thank-right__details
+              .thank-right__details-row
+                span.b-sb Отримувач:
+                span.b-s Dima Design, (067) 123 45 67, dmitriy.designer@gmail.com
+              .thank-right__details-row
+                span.b-sb Доставка:
+                span.b-s Купистул, Київ, Свободи 20/23
+              .thank-right__details-row
+                span.b-sb Збiрка:
+                span.b-s Без складання
+              .thank-right__details-row
+                span.b-sb Оплата:
+                span.b-s При отриманні
+            //end thank-right__details
+        //end thank-right
+    //end content
+
+    include ../sections/scripts
