@@ -5,7 +5,8 @@ $(document).ready(function ($) {
   pageWidget([
     'index',
     'checkout',
-    'thank'
+    'thank',
+    'about',
   ]);
 });
 

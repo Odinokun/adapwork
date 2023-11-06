@@ -39,6 +39,11 @@
 @import "sections/checkout/checkout-delivery";
 @import "sections/checkout/checkout-payment";
 
+@import "sections/about/about-seo";
+@import "sections/about/about-tabs";
+@import "sections/about/about-categories";
+
 //pages
 @import 'pages/checkout';
 @import 'pages/thank';
+@import 'pages/about';
