@@ -1,0 +1,38 @@
+extends ../_template
+
+block variables
+  - let title       = 'Adapwork'
+  - let description = 'Adapwork website'
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      //begin page-top
+      .page-top.wrapper
+        h1.h1.page-top__title ADAPWORK© — сучасний бренд по розробці офісних смарт столів та ергономічних крісел.
+      //end page-top
+
+      //begin about-video
+      .about-video
+        video(aria-hidden="true"
+          src="assets/video/hero-video.mp4"
+          loop
+          preload="auto"
+          autoplay
+          muted
+          playsinline)
+      //end about-video
+
+      include ../sections/about/about-seo
+      include ../sections/about/about-tabs
+      include ../sections/about/about-categories
+
+      include ../sections/home-page/seo
+      include ../sections/home-page/inst
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
