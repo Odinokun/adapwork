@@ -10,6 +10,7 @@ $(function() {
   require('./modules/swiper')();
   require('./modules/scrollbar')();
   require('./modules/counter')();
+  require('./modules/accordion')();
 
   // require('./modules/scrollUp')();
   // require('./modules/noJs')();

@@ -83,6 +83,10 @@ svg {
 }
 
 .page-top {
-  padding-top: 140px;
-  padding-bottom: 30px;
+  padding-top: 90px;
+  padding-bottom: 32px;
+
+  @include min(1024) {
+    padding-top: 140px;
+  }
 }
