@@ -87,12 +87,18 @@
 
 /* begin input && select */
 .input,
-.select {
+.select,
+.textarea{
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-bottom: 8px;
   transition: all .3s ease-in-out;
+}
+.textarea{
+  .custom__field{
+    min-height: 120px;
+  }
 }
 
 /* end   input && select */
