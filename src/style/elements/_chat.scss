@@ -1,0 +1,45 @@
+.chat {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 36px;
+  height: 33px;
+  cursor: pointer;
+  animation: changeBackground 3s infinite;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  box-shadow: none;
+
+  @include min(768) {
+    right: 20px;
+    bottom: 20px;
+  }
+  @include min(1024) {
+    right: 32px;
+    bottom: 32px;
+  }
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url('../img/chat-01.svg');
+  }
+  33.32% {
+    background-image: url('../img/chat-01.svg');
+  }
+  33.33% {
+    background-image: url('../img/chat-02.svg');
+  }
+  66.65% {
+    background-image: url('../img/chat-02.svg');
+  }
+  66.66% {
+    background-image: url('../img/chat-03.svg');
+  }
+  100% {
+    background-image: url('../img/chat-03.svg');
+  }
+}
