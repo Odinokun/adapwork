@@ -11,11 +11,15 @@ $(function() {
   require('./modules/scrollbar')();
   require('./modules/counter')();
   require('./modules/accordion')();
+  require('./modules/scroll2anchor')();
+  require('./modules/filer-items-hide')();
+  require('./modules/tooltips')();
+  require('./modules/catalog-grid')();
+  require('./modules/catalog-filter')();
 
   // require('./modules/scrollUp')();
   // require('./modules/noJs')();
   // require('./modules/maskedinput')();
-  // require('./modules/scroll2anchor')();
   // require('./modules/popup')();
 
 });
