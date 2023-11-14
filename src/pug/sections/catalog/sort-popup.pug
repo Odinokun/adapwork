@@ -1,0 +1,19 @@
+//begin sort-popup
+form.sort-popup.popup#sort-popup
+  .sort-popup__inner
+    h3.h3.catalog-filter__title Сортувати
+    .filter-popup__close
+      +svg('delete')
+
+    .sort-popup__items
+      .sort-popup__item
+        .h4 За популярністю
+      .sort-popup__item
+        .h4 За зростанням цiни
+      .sort-popup__item
+        .h4 За спаданням цiни
+
+    .sort-popup__footer
+      button.btn(type="reset")
+        .cta застосувати
+//end sort-popup

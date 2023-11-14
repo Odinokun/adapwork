@@ -1,23 +1,23 @@
 mixin slide(img, title, price)
-  a(href="/").swiper-slide.popular-slider__slide
-    .popular-slider__img
+  a(href="/").swiper-slide.card
+    .card__img
       img(src=`assets/img/popular/slide-${img}.jpg`, alt=`${title}`)
-    .popular-slider__footer
-      h3.b-s.popular-slider__title #{title}
-      span.b-sb.popular-slider__price #{price}
-      .popular-slider__btn
+    .card__footer
+      h3.b-s.card__title #{title}
+      span.b-sb.card__price #{price}
+      .card__btn
         +svg('popular-btn')
 
 mixin slide-sale(sale, img, title, price)
-  a(href="/").swiper-slide.popular-slider__slide
-    .popular-slider__img
+  a(href="/").swiper-slide.card
+    .card__img
       img(src=`assets/img/popular/slide-${img}.jpg`, alt=`${title}`)
-      .popular-slider__sale
+      .card__sale
         span.b-s #{sale}
-    .popular-slider__footer
-      h3.b-s.popular-slider__title #{title}
-      span.b-sb.popular-slider__price #{price}
-      .popular-slider__btn
+    .card__footer
+      h3.b-s.card__title #{title}
+      span.b-sb.card__price #{price}
+      .card__btn
         +svg('popular-btn')
 
 //begin popular

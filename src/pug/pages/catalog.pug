@@ -1,0 +1,87 @@
+extends ../_template
+
+block variables
+  - let title       = 'Adapwork'
+  - let description = 'Adapwork website'
+
+mixin item(img, title, price)
+  a(href="/").catalog__item.card
+    .card__img
+      img(src=`assets/img/popular/slide-${img}.jpg`, alt=`${title}`)
+    .card__footer
+      h3.b-s.card__title #{title}
+      span.b-sb.card__price #{price}
+      .card__btn
+        +svg('popular-btn')
+
+mixin item-sale(sale, img, title, price)
+  a(href="/").catalog__item.card
+    .card__img
+      img(src=`assets/img/popular/slide-${img}.jpg`, alt=`${title}`)
+      .card__sale
+        span.b-s #{sale}
+    .card__footer
+      h3.b-s.card__title #{title}
+      span.b-sb.card__price #{price}
+      .card__btn
+        +svg('popular-btn')
+
+
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      //begin page-top
+      .catalog-header.wrapper(style="background-image: url('assets/img/bg-catalog-header.jpg')")
+        h1.h1.catalog-header__title ErgoChairs
+      //end page-top
+
+      //begin catalog
+      .catalog.wrapper
+        //begin catalog-sidebar
+        .catalog-sidebar
+          include ../sections/catalog/filter
+        //end catalog-sidebar
+
+        //begin catalog-body
+        .catalog-body
+          .catalog-body__header
+            .h4.catalog-body__header-count 12 моделей
+            .catalog-body__header-sort
+              .b-s-sb.catalog-body__header-sort-text Сортувати:
+              select.catalog-body__header-sort-select
+                option(value="1") Зростанням ціни
+                option(value="2") За назвою
+                option(value="3") За рейтингом
+
+          .catalog-body__list.catalog-body__list--grid
+            +item-sale('-10%', '01','ADAPWORK Middle M1 ErgoChair','$ 489')
+            +item('02','ADAPWORK Senior S1 ErgoChair','$ 380')
+            +item('03','ADAPWORK Senior S1 Mesh ErgoChair','$ 850')
+            +item('04','ADAPWORK Senior S2 ErgoChair','$ 489')
+            +item-sale('-10%', '01','ADAPWORK Middle M1 ErgoChair','$ 489')
+            +item('02','ADAPWORK Senior S1 ErgoChair','$ 380')
+            +item('03','ADAPWORK Senior S1 Mesh ErgoChair','$ 850')
+            +item('04','ADAPWORK Senior S2 ErgoChair','$ 489')
+          .catalog-body__footer
+            .catalog-body__footer-text.cta ви продивились усi товари. в гору.
+            a(href="#header").catalog-body__footer-btn
+              +svg('arrow')
+        //end catalog-body
+      //end catalog
+
+
+
+      include ../sections/catalog/tooltips
+      include ../elements/filter-panel
+      include ../sections/catalog/filter-popup
+      include ../sections/catalog/sort-popup
+      include ../sections/home-page/inst
+    //end content
+
+    include ../sections/footer
+    include ../elements/chat
+    include ../sections/scripts

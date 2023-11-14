@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   top: 0;
   left: 0;
@@ -48,11 +48,12 @@
     }
   }
 
-  &.is-scroll {
-    &::before {
-      opacity: 1;
-    }
+  //&.is-scroll {
+  &::before {
+    opacity: .6;
   }
+
+  //}
 }
 
 .header__logo {

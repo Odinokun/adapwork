@@ -1,0 +1,17 @@
+mixin tooltip(tooltipId, img)
+  .tooltip(id=tooltipId)
+    .tooltip__inn
+      .tooltip__img
+        img(src=`assets/img/about-section/about-${img}.jpg`, alt=`${title}`)
+      .tooltip__text.b-s Регулювання висоти сидiння вiд полу дуже важлива опцiя. Регулювання висоти сидіння забезпечує оптимальний промiжок простору між вашим тілом і столом.
+      .tooltip__close
+        +svg('delete')
+
+//begin tooltips
+.tooltips
+  +tooltip('lead-serie', '01')
+  +tooltip('middle-serie', '02')
+  +tooltip('senior-serie', '03')
+  +tooltip('seat-hight', '04')
+  +tooltip('seat-angle', '05')
+//end tooltips

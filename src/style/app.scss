@@ -10,6 +10,8 @@
 @import 'elements/custom-fields';
 @import 'elements/switcher';
 @import 'elements/chat';
+@import 'elements/card';
+@import 'elements/filter-panel';
 //@import 'elements/burger';
 //@import 'elements/scrollUp';
 //@import 'elements/breadcrumbs';
@@ -44,9 +46,15 @@
 @import "sections/about/about-tabs";
 @import "sections/about/about-categories";
 
+@import "sections/catalog/filter";
+@import "sections/catalog/tooltips";
+@import "sections/catalog/filter-popup";
+@import "sections/catalog/sort-popup";
+
 //pages
 @import 'pages/checkout';
 @import 'pages/thank';
 @import 'pages/about';
 @import 'pages/support';
 @import 'pages/showroom';
+@import 'pages/catalog';

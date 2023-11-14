@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'about',
     'support',
     'showroom',
+    'catalog',
   ]);
 });
 

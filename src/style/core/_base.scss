@@ -90,3 +90,39 @@ svg {
     padding-top: 140px;
   }
 }
+
+/* begin CHECKBOX */
+.input-checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--SOFT-WHITE, #f5f5f5);
+  border-radius: 2px;
+
+  input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+  }
+
+  span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    transition: opacity .3s ease;
+    opacity: 0;
+    background-image: url('../img/check.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  input:checked + span {
+    opacity: 1;
+  }
+}
+
+/* end   CHECKBOX */
