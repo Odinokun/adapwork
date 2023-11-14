@@ -7,6 +7,10 @@
   border-radius: 4px;
 
   &:hover {
+    .card__img img {
+      transform: scale(1.1);
+    }
+
     .card__btn {
       transform: rotate(-45deg);
     }
@@ -24,6 +28,7 @@
     display: block;
     width: 100%;
     height: 100%;
+    transition: all .3s ease-in-out;
     object-fit: cover;
     object-position: center;
   }

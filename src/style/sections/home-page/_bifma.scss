@@ -1,0 +1,57 @@
+.bifma-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 90px;
+
+  @include min(768) {
+    padding-bottom: 120px;
+  }
+  @include min(1200) {
+    padding-bottom: 160px;
+  }
+}
+
+.bifma {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+
+  @include min(1024) {
+    flex-direction: row;
+  }
+  @include min(1440) {
+    align-items: center;
+  }
+}
+
+.bifma__cert {
+  flex: none;
+  width: 220px;
+  margin-bottom: 20px;
+
+  @include min(1024) {
+    margin-right: 45px;
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bifma__text {
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.8px;
+
+  @include min(1024) {
+    letter-spacing: -1.28px;
+  }
+  @include responsive-font(32, 20);
+}
