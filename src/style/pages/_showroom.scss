@@ -127,6 +127,13 @@
     display: grid;
     grid-template-columns: 64px 1fr;
     grid-template-areas: 'img title' 'img descr';
+    padding-left: 2px;
+    border-color: transparent;
+    background-color: #0d0d0d;
+  }
+
+  .checkout-delivery__item-img {
+    background-color: #1b1b1b;
   }
 
   .checkout-delivery__item-title {
@@ -140,7 +147,14 @@
     padding: 4px 14px 14px 30px;
   }
 
-  .checkout-delivery__item--kupistul .checkout-delivery__item-descr {
-    color: #f5f5f5;
+  .checkout-delivery__item--kupistul {
+    .checkout-delivery__row {
+      border-color: #1b1b1b;
+      background-color: #121212;
+    }
+
+    .checkout-delivery__item-descr {
+      color: #f5f5f5;
+    }
   }
 }
