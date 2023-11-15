@@ -16,10 +16,7 @@ $(function() {
   require('./modules/tooltips')();
   require('./modules/catalog-grid')();
   require('./modules/catalog-filter')();
-
-  // require('./modules/scrollUp')();
-  // require('./modules/noJs')();
-  // require('./modules/maskedinput')();
-  // require('./modules/popup')();
+  require('./modules/checkout-payment')();
+  require('./modules/checkout-delivery')();
 
 });

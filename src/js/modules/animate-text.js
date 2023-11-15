@@ -29,7 +29,8 @@ module.exports = function () {
       scrub: 2,
       pin: true,
     },
-    opacity: 0.05,
+    // opacity: 0.05,
+    color: '#1b1b1b',
     // scale: 1.35,
     // ease: 'back.out(2)',
     stagger: { amount: 10, from: 'start' },
@@ -62,11 +63,11 @@ module.exports = function () {
 
   gsap.to('.bifma', {
     opacity: 1,
-    duration: 0.5,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.bifma',
-      start: '150% bottom',
-      scrub: true,
+      start: '100% bottom',
+      scrub: 1.2,
       once: true,
     },
   });

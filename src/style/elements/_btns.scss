@@ -90,7 +90,13 @@
   }
 }
 
+.swiper-btn--prev {
+  border-radius: 4px 0 0 4px;
+}
+
 .swiper-btn--next {
+  border-radius: 0 4px 4px 0;
+
   svg {
     transform: rotate(180deg);
   }

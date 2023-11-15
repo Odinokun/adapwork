@@ -12,6 +12,11 @@
 .products--tables {
   .products__left {
     justify-content: flex-end;
+    background-image: url('../img/tables.jpg');
+
+    @include min(1200) {
+      background-image: url('../img/tables@2x.jpg');
+    }
   }
 }
 
