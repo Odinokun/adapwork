@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
@@ -9,11 +9,17 @@
   min-height: 56px;
   padding-top: 10px;
   padding-bottom: 10px;
+  opacity: 1;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
   @include min(1024) {
     min-height: 80px;
     padding-top: 18px;
     padding-bottom: 18px;
+  }
+  &.hidden{
+    transform: translateY(-100%);
+    opacity: 0;
   }
 
   &::before {
