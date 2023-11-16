@@ -1,0 +1,62 @@
+mixin item()
+  //begin basket__item
+  .basket__item.basket-item
+    .basket-item__img
+      img(src='assets/img/order-01.jpg' alt='checkout-order')
+    .basket-item__descr
+      .b-m-sb.basket-item__title Senior S1 Mesh ErgoChair
+      .b-s.basket-item__text Чорний SKU: AWS10008
+      .b-s.basket-item__label Безкоштовна доставка *
+      .basket-item__descr-footer
+        .basket-item__counter
+          .counter
+            button.counter__btn.counter__btn--minus
+              +svg('minus')
+            input.counter__input(type='text' value='1' readonly)
+            button.counter__btn.counter__btn--plus
+              +svg('plus')
+        .basket-item__price
+          .b-s.basket-item__price-one $399/item
+          .b-m-sb.basket-item__price-all $399.00
+  //end basket__item
+
+mixin sale()
+  //begin basket__item
+  .basket__item.basket-item
+    .basket__sale-title.h4 🔥 Додаткові фішки до ваших офісних девайсів:
+    .basket-item__img
+      img(src='assets/img/order-02.jpg' alt='checkout-order')
+    .basket-item__descr
+      .b-m-sb.basket-item__title 5 pieces SET of rubberized rollers ADAPWORK CASTORS 75 FIX Transparent
+      .b-s.basket-item__text Чорний SKU: AWAR0003
+      .basket-item__sale-footer
+        .b-m-sb.basket-item__sale-price $39.00
+        button.basket-item__add-btn
+          +svg('plus')
+          span.cta Додати
+  //end basket__item
+
+.basket-layer#basket-layer
+//begin basket
+.basket
+  //begin header
+  .basket__header
+    .basket__header-title.h4 Ви обрали
+    .basket__header-close
+      +svg('delete')
+  //end header
+
+  //begin basket__content
+  .basket__content-wrapper
+    .basket__content
+      +item()
+      +sale()
+  //end basket__content
+
+  //begin basket__footer
+  .basket__footer
+    .basket__footer-text.h4 Всього
+    .basket__footer-price.h3 $399.00
+    button.basket__footer-btn.btn.btn--dark Деталі замовлення
+  //end basket__footer
+//end basket

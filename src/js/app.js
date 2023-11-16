@@ -18,5 +18,6 @@ $(function() {
   require('./modules/catalog-filter')();
   require('./modules/checkout-payment')();
   require('./modules/checkout-delivery')();
+  require('./modules/basket')();
 
 });
