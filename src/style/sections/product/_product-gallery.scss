@@ -1,8 +1,10 @@
 .product-gallery {
   position: relative;
   overflow: hidden;
+  margin-bottom: 70px;
 
   @include min(1024) {
+    margin-bottom: 150px;
     padding: 30px;
   }
 }
