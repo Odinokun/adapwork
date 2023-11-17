@@ -1,13 +1,3 @@
-mixin tab(img, title, subtitle)
-  div(class="product-tab product-tab-" + img)
-    picture
-      source(media="(min-width: 1024px)", srcset="assets/img/product-tab/product-tab-" + img + "@2x.jpg")
-      source(srcset="assets/img/product-tab/product-tab-" + img + ".jpg")
-      img(src="assets/img/product-tab/product-tab-" + img + ".jpg", alt="Image")
-    .product-tab__content
-      h3.h3.product-tab__title= title
-      h4.h4.product-tab__subtitle= subtitle
-
 //begin product-tabs
 .product-tabs
   //begin tab-01
