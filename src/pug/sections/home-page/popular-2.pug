@@ -1,0 +1,46 @@
+mixin slide(img, title, price)
+  a(href="/").swiper-slide.card
+    .card__img
+      img(src=`assets/img/popular/slide-${img}.jpg`, alt=`${title}`)
+    .card__footer
+      h3.b-s.card__title #{title}
+      span.b-sb.card__price #{price}
+      .card__btn
+        +svg('popular-btn')
+
+mixin slide-sale(sale, img, title, price)
+  a(href="/").swiper-slide.card
+    .card__img
+      img(src=`assets/img/popular/slide-${img}.jpg`, alt=`${title}`)
+      .card__sale
+        span.b-s #{sale}
+    .card__footer
+      h3.b-s.card__title #{title}
+      span.b-sb.card__price #{price}
+      .card__btn
+        +svg('popular-btn')
+
+//begin popular
+.popular.wrapper
+  h2.h2.popular__title Схожі крісла
+  //begin popular__slider
+  .popular__slider.popular-slider#popular-slider
+    .swiper-wrapper
+      +slide-sale('-10%', '01','ADAPWORK Middle M1 ErgoChair','$ 489')
+      +slide('02','ADAPWORK Senior S1 ErgoChair','$ 380')
+      +slide('03','ADAPWORK Senior S1 Mesh ErgoChair','$ 850')
+      +slide('04','ADAPWORK Senior S2 ErgoChair','$ 489')
+      +slide-sale('-10%', '01','ADAPWORK Middle M1 ErgoChair','$ 489')
+      +slide('02','ADAPWORK Senior S1 ErgoChair','$ 380')
+      +slide('03','ADAPWORK Senior S1 Mesh ErgoChair','$ 850')
+      +slide('04','ADAPWORK Senior S2 ErgoChair','$ 489')
+
+    .popular-slider__btns
+      .popular-slider__btn.swiper-btn.swiper-btn--prev
+        +svg('arrow')
+      .popular-slider__btn.swiper-btn.swiper-btn--next
+        +svg('arrow')
+  //end popular__slider
+
+  a(href="/").btn.btn--cta.popular__all-btn дивитись всi
+//end popular

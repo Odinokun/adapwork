@@ -10,6 +10,7 @@ $(document).ready(function ($) {
     'support',
     'showroom',
     'catalog',
+    'product',
   ]);
 });
 

@@ -12,12 +12,6 @@
 @import 'elements/chat';
 @import 'elements/card';
 @import 'elements/filter-panel';
-//@import 'elements/burger';
-//@import 'elements/scrollUp';
-//@import 'elements/breadcrumbs';
-//@import 'elements/pagination';
-//@import 'elements/popup';
-//@import 'elements/slickBase';
 
 //section
 @import 'sections/header/header';
@@ -52,6 +46,8 @@
 @import "sections/catalog/filter-popup";
 @import "sections/catalog/sort-popup";
 
+@import "sections/product/product-top";
+
 @import "sections/basket";
 
 //pages
@@ -61,3 +57,4 @@
 @import 'pages/support';
 @import 'pages/showroom';
 @import 'pages/catalog';
+@import 'pages/product';
