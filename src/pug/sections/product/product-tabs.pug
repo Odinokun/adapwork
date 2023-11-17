@@ -1,0 +1,82 @@
+mixin tab(img, title, subtitle)
+  div(class="product-tab product-tab-" + img)
+    picture
+      source(media="(min-width: 1024px)", srcset="assets/img/product-tab/product-tab-" + img + "@2x.jpg")
+      source(srcset="assets/img/product-tab/product-tab-" + img + ".jpg")
+      img(src="assets/img/product-tab/product-tab-" + img + ".jpg", alt="Image")
+    .product-tab__content
+      h3.h3.product-tab__title= title
+      h4.h4.product-tab__subtitle= subtitle
+
+//begin product-tabs
+.product-tabs
+  //begin tab-01
+  .product-tab.product-tab-01
+    picture
+      source(media="(min-width: 1024px)", srcset="assets/img/product-tab/product-tab-01@2x.jpg")
+      source(srcset="assets/img/product-tab/product-tab-01.jpg")
+      img(src="assets/img/product-tab/product-tab-01.jpg", alt="Image")
+    .product-tab__content
+      h3.h3.product-tab__title 15 точок регулювання<br>Ergo-крісла ADAPWORK©
+      h4.h4.product-tab__subtitle Ваше ergo-крісло S1 зробить так, як вам буде зручно.<br>Регулюйте все: від висоти підголовника, до кута нахилу сидіння.
+  //end tab-01
+  //begin tab-02
+  .product-tab.product-tab-02
+    picture
+      source(media="(min-width: 1024px)", srcset="assets/img/product-tab/product-tab-02@2x.jpg")
+      source(srcset="assets/img/product-tab/product-tab-02.jpg")
+      img(src="assets/img/product-tab/product-tab-02.jpg", alt="Image")
+    .product-tab__content
+      h3.h3.product-tab__title Прохолодний Arctic Gray
+      h4.h4.product-tab__subtitle Освіжайте власний інтер’єр з ergo-кріслом у кольорі Arctic Gray. Вишуканий білий корпус та сіра акцентна обшивка гармонійно впишеться у ваш робочий простір.
+  //end tab-02
+  //begin tab-03
+  .product-tab.product-tab-03
+    picture
+      source(media="(min-width: 1024px)", srcset="assets/img/product-tab/product-tab-03@2x.jpg")
+      source(srcset="assets/img/product-tab/product-tab-03.jpg")
+      img(src="assets/img/product-tab/product-tab-03.jpg", alt="Image")
+    .product-tab__content
+      h3.h3.product-tab__title М’яке сидіння <br> для робочої ефективності
+      h4.h4.product-tab__subtitle Класичне м’яке сидіння ergo-крісла S1 піклується про ваш комфорт та збільшує робочу продуктивність.
+  //end tab-03
+  //begin tab-04
+  .product-tab.product-tab-04
+    picture
+      source(media="(min-width: 1024px)", srcset="assets/img/product-tab/product-tab-04@2x.jpg")
+      source(srcset="assets/img/product-tab/product-tab-04.jpg")
+      img(src="assets/img/product-tab/product-tab-04.jpg", alt="Image")
+    .product-tab__content
+      h3.h3.product-tab__title 2D підголовник<br>для максимального комфорту
+      h4.h4.product-tab__subtitle Пориньте з головою у роботу з функціональним 2d підголовником свого ergo-крісла S1: регулюйте висоту та кут нахилу підголовника для досягнення максимальної зручності.
+  //end tab-04
+  //begin tab-05
+  .product-tab.product-tab-05
+    picture
+      source(media="(min-width: 1024px)", srcset="assets/img/product-tab/product-tab-05@2x.jpg")
+      source(srcset="assets/img/product-tab/product-tab-05.jpg")
+      img(src="assets/img/product-tab/product-tab-05.jpg", alt="Image")
+    .product-tab__content
+      h3.h3.product-tab__title 4D підлокітники<br>– 4D комфорт
+      h4.h4.product-tab__subtitle Функціональні підлокітники ergo-крісла S1 дозволять розслабити руки та перевести подих після довгих робочих годин.
+  //end tab-05
+  //begin tab-06
+  .product-tab.product-tab-06
+    picture
+      source(media="(min-width: 1024px)", srcset="assets/img/product-tab/product-tab-06@2x.jpg")
+      source(srcset="assets/img/product-tab/product-tab-06.jpg")
+      img(src="assets/img/product-tab/product-tab-06.jpg", alt="Image")
+    .product-tab__content
+      h4.h4.product-tab__subtitle Функціональні підлокітники ergo-крісла S1 дозволять розслабити руки та перевести подих після довгих робочих годин.
+      .product-tab__content-row
+        .product-tab__content-row-item
+          .h3 ХХ - ХХ cm
+          .b-s висота посадки
+        .product-tab__content-row-item
+          .h3 up to 45 cm
+          .b-s глибина та кут нахилу сидіння
+        .product-tab__content-row-item
+          .h3 15 - 45 cm
+          .b-s підголівник по висоті і кут нахилу
+  //end tab-06
+//end product-tabs
