@@ -6,10 +6,9 @@ module.exports = [
   './node_modules/swiper/swiper-bundle.js',
   './node_modules/gsap/dist/gsap.js',
   './node_modules/gsap/dist/ScrollTrigger.js',
-  './node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js'
-  // './node_modules/split-type/dist/index.js'
+  './node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
 
   // './src/vendors/jquery-ui/jquery-ui.min.js',
-  // './src/vendors/maskedinput/jquery.maskedinput.min.js',
+  // './node_modules/split-type/dist/index.js'
   // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 ];
