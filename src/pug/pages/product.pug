@@ -1,0 +1,66 @@
+extends ../_template
+
+block variables
+  - let title       = 'Adapwork'
+  - let description = 'Adapwork website'
+
+mixin item(title)
+  .support__faq-item
+    .support__faq-item-header
+      h4.h4.support__faq-item-title= title
+      .support__faq-item-icon
+        svg(xmlns='http://www.w3.org/2000/svg' width='28' height='11' viewBox='0 0 28 11' fill='none')
+          path(d='M23.6464 10.8536C23.8417 11.0488 24.1583 11.0488 24.3536 10.8536L27.5355 7.67157C27.7308 7.47631 27.7308 7.15973 27.5355 6.96447C27.3403 6.7692 27.0237 6.7692 26.8284 6.96447L24 9.79289L21.1716 6.96447C20.9763 6.7692 20.6597 6.7692 20.4645 6.96447C20.2692 7.15973 20.2692 7.47631 20.4645 7.67157L23.6464 10.8536ZM24.5 10.5V2.5H23.5V10.5H24.5ZM22 0H0V1H22V0ZM24.5 2.5C24.5 1.11929 23.3807 0 22 0V1C22.8284 1 23.5 1.67157 23.5 2.5H24.5Z')
+
+    .support__faq-item-content
+      .support__faq-item-content-text
+        p.b-m Пориньте в крісло, створене для вашого тіла. Наш ергономічний шедевр забезпечує підтримку, на яку заслуговує ваш хребет, забезпечуючи вам комфорт і зосередженість протягом усього дня. Покращена постава: попрощайтеся з сутулістю. Наше крісло сприяє правильній поставі, зменшує навантаження на вашу спину та шию та допомагає вам підтримувати більш здорове положення.
+        p.b-m Підвищення продуктивності: коли ви невимушені, ваш розум процвітає. Відчуйте підвищену продуктивність під час ефективної роботи, не відволікаючись від дискомфорту. Настроювана посадка: створіть крісло відповідно до своїх уподобань. Завдяки регульованим функціям, таким як висота, підлокітники та поперекова підтримка, ви контролюєте своє сидіння.
+
+block content
+  .main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../sections/product/product-top
+      include ../sections/product/product-tabs
+      include ../sections/product/product-360-header
+      include ../sections/product/product-360
+
+
+      include ../sections/product/product-gallery
+      //begin support
+      .support
+        //begin support__faq
+        .support__faq.wrapper
+          +item("Де знайти iнструкцiю зi складання товарiв?")
+          +item("Яка гарантiя?")
+          +item("Продукцiя безпечна для здоров’я?")
+          +item("Умови повернення та обмiну товару, якщо вiн не пiдiйшов?")
+          +item("Доставка товару")
+        //end support__faq
+        //begin support__footer
+        .support__footer.wrapper
+          .cta.support__footer-text
+            |не бачите відповіді на ваше запитання?
+            br
+            | Наш менеджер на зв'язку та готовий відповісти на ваші запитання у месенджерах:
+          .support__footer-links
+            a(href='#' target='_blank').support__footer-link
+              +svg('tg')
+            a(href='#' target='_blank').support__footer-link
+              +svg('viber')
+            a(href='#' target='_blank').support__footer-link
+              +svg('whatsapp')
+        //end support__footer
+      //end support
+      include ../sections/home-page/popular-2
+      include ../sections/home-page/inst
+    //end content
+
+    include ../sections/footer
+    include ../sections/basket
+    include ../sections/basket
+    include ../sections/catalog/tooltips
+    include ../sections/scripts

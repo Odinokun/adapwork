@@ -1,0 +1,75 @@
+mixin slide()
+  .gallery-slider__slide.swiper-slide
+    picture
+      source(media="(min-width: 1024px)", srcset="assets/img/gallery/gallery-01@2x.jpg")
+      source(srcset="assets/img/gallery/gallery-01.jpg")
+      img(src="assets/img/gallery/gallery-01.jpg", alt="Image")
+mixin slide2()
+  .gallery-slider__slide.swiper-slide
+    picture
+      source(media="(min-width: 1024px)", srcset="assets/img/product-top@2x.jpg")
+      source(srcset="assets/img/product-top.jpg")
+      img(src="assets/img/product-top.jpg", alt="Image")
+
+//begin product-gallery
+.product-gallery
+  //begin product-gallery__header
+  .product-gallery__header
+    h2.h2.product-gallery__title Галерея
+    .product-gallery__header-filter
+      .cta.product-gallery__header-filter-item.active all
+      .cta.product-gallery__header-filter-item Interior
+      .cta.product-gallery__header-filter-item Isolated
+      .cta.product-gallery__header-filter-item Details
+      .cta.product-gallery__header-filter-item Tech
+  //end product-gallery__header
+  //begin gallery-slider
+  .gallery-slider#gallery-slider
+    .swiper-wrapper
+      +slide()
+      +slide2()
+      +slide()
+      +slide2()
+      +slide()
+      +slide2()
+      +slide()
+      +slide2()
+      +slide()
+      +slide2()
+      +slide()
+      +slide2()
+    .gallery-slider__btns
+      .gallery-slider__btn.swiper-btn.swiper-btn--prev
+        +svg('arrow')
+      .gallery-slider__btn.swiper-btn.swiper-btn--next
+        +svg('arrow')
+  //end gallery-slider
+  //begin gallery-thumb-slider
+  .gallery-thumb-slider#gallery-thumb-slider
+    .swiper-wrapper
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-01.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-02.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-03.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-04.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-05.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-06.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-04.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-05.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-06.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-07.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-08.jpg' alt='img')
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-09.jpg' alt='img')
+  //end gallery-thumb-slider
+//end product-gallery

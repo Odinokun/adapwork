@@ -34,4 +34,34 @@ module.exports = function () {
   });
   // end Popular slider
 
+  //begin Gallery slider
+  const galleryThumb = new Swiper("#gallery-thumb-slider", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 3.5,
+    centeredSlides: true,
+    breakpoints: {
+      560: {
+        slidesPerView: 6.5,
+      },
+      768: {
+        slidesPerView: 9,
+      }
+    },
+  });
+
+  const gallery = new Swiper("#gallery-slider", {
+    effect: "fade",
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-btn--next",
+      prevEl: ".swiper-btn--prev",
+    },
+    thumbs: {
+      swiper: galleryThumb,
+    },
+  });
+  //end Gallery slider
+
 };
