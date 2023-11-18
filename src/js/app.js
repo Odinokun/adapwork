@@ -20,5 +20,6 @@ $(function() {
   require('./modules/checkout-delivery')();
   require('./modules/basket')();
   require('./modules/dinamic-header')();
+  require('./modules/table')();
 
 });

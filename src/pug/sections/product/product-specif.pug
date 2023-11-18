@@ -1,0 +1,54 @@
+mixin row(text1, text2)
+  .product-specif__table-row
+    .product-specif__table-row-inner
+      .product-specif__table-cell
+        .b-sb= text1
+      .product-specif__table-cell
+        .b-s= text2
+
+//begin product-specif
+.product-specif.wrapper
+  .product-specif__inn
+    //begin product-specif__left
+    .product-specif__left
+      .product-specif__img
+        img(src="assets/img/specif.png" alt="img")
+    //end product-specif__left
+
+    //begin product-specif__right
+    .product-specif__right
+      .product-specif__table
+        +row('Размеры', '29”Д x 29”Ш x 46” - 50”В')
+        +row('Размер сиденья', '20”Д x 20”Ш')
+        +row('Высота сиденья', '18” - 20”')
+        +row('Размеры спинки (без подголовника)', '21 "Ш x 22" В')
+        +row('Размеры спинки (с подголовником)', '21 "Ш x 28" - 31" В')
+        +row('Диапазон наклона', '22°')
+        +row('Высота подлокотника', '11” - 14”')
+        +row('Высота подлокотника (от пола)', '26,7” - 32,2”')
+        +row('Диаметр колесика', '2,36 дюйма')
+        +row('Количество самоустанавливающихся колес', '5')
+        +row('Материалы', 'Полиэфирная ткань с внутренней частью из формованного пеноматериала и прочной нейлоновой пластиковой рамой; ПУ подлокотники')
+        +row('Грузоподъемность', '300 кг')
+        +row('Вес предмета', '20 кг')
+        +row('Транспортировочные размеры', '29"Д x 27"Ш x 19"В (22 кг)')
+        +row('Требуется сборка', 'Да')
+        +row('Гарантия', '5 лет')
+        +row('Бесплатный возврат', '30 дней')
+        +row('Регулируемость', 'Подголовник, подлокотник, угол наклона и натяжение спинки, наклон и высота сиденья')
+        .product-specif__table-row
+          .product-specif__table-row-inner
+            .product-specif__table-cell
+              .b-sb Инструкции по сборке
+            .product-specif__table-cell
+              a(href="/" target="_blank").product-specif__download
+                +svg('pdf')
+                .cta Скачать инструкцию
+      //begin btn
+      .product-specif__table-btn-wrap
+        .product-specif__table-btn
+          .cta розгорнути
+          +svg('arrow')
+      //end btn
+    //end product-specif__right
+//end product-specif
