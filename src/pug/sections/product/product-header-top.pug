@@ -1,0 +1,14 @@
+//begin product-header-top
+.product-header-top.wrapper
+  //begin left
+  .product-header-top__left
+    a(href="/").product-header-top__back
+      .product-header-top__back-icon
+        +svg('back')
+      .product-header-top__back-text.cta до каталогу
+  //end left
+  //begin right
+  .product-header-top__right
+    include ./product-scroll-nav
+  //end right
+//end product-header-top

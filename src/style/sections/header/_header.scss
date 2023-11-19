@@ -1,3 +1,10 @@
+.product .header {
+  position: absolute;
+  top: 0 !important;
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
 .header {
   position: fixed;
   z-index: 10;

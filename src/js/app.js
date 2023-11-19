@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
   require('./modules/svg4everybody')();
   require('./modules/select')();
@@ -21,5 +21,7 @@ $(function() {
   require('./modules/basket')();
   require('./modules/dinamic-header')();
   require('./modules/table')();
+  require('./modules/product-menu')();
+  require('./modules/product-menu-change-color')();
 
 });

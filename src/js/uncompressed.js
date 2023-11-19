@@ -68,13 +68,14 @@ const range = document.querySelector('.product-360__middle-range');
 const rangeIndicator = document.querySelector('.product-360__middle-range-slider');
 const middleImage = Math.floor(images.length / 2);
 
-range.value = middleImage;
-rangeIndicator.value = middleImage;
-range.max = images.length - 1;
-rangeIndicator.max = images.length - 1;
-img.src = images[middleImage];
-range.oninput = () => img.src = images[range.value];
-
+if (img && range && rangeIndicator) {
+  range.value = middleImage;
+  rangeIndicator.value = middleImage;
+  range.max = images.length - 1;
+  rangeIndicator.max = images.length - 1;
+  img.src = images[middleImage];
+  range.oninput = () => img.src = images[range.value];
+}
 
 //  added opacity for range
 $(range).on("mousedown", function () {
