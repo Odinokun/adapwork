@@ -9,15 +9,16 @@
   min-height: 56px;
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: transform .3s ease-in-out, opacity .3s ease-in-out;
   opacity: 1;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
   @include min(1024) {
     min-height: 80px;
     padding-top: 18px;
     padding-bottom: 18px;
   }
-  &.hidden{
+
+  &.hidden {
     transform: translateY(-100%);
     opacity: 0;
   }
