@@ -29,7 +29,7 @@ mixin item-sale(sale, img, title, price)
 
 
 block content
-  .main-wrap
+  .main-wrap#main-wrap
     include ../sections/header
 
     //begin content
@@ -68,7 +68,7 @@ block content
             +item('04','ADAPWORK Senior S2 ErgoChair','$ 489')
           .catalog-body__footer
             .catalog-body__footer-text.cta ви продивились усi товари. в гору.
-            a(href="#header").catalog-body__footer-btn
+            a(href="#main-wrap").catalog-body__footer-btn
               +svg('arrow')
         //end catalog-body
       //end catalog

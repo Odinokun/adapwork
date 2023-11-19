@@ -81,7 +81,6 @@ if (img && range && rangeIndicator) {
 $(range).on("mousedown", function () {
   $(this).addClass('active');
 });
-
 $(range).on("mouseup", function () {
   $(this).removeClass('active');
 });

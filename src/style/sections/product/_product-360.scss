@@ -43,11 +43,16 @@
 /* begin MIDDLE */
 .product-360__middle {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 40px;
+
+  @include min(768) {
+    margin: 0 auto;
+  }
 }
 
 .product-360__middle-image-wrap {
   width: 100%;
+  min-height: 450px;
   margin-bottom: 30px;
 
   img {
@@ -68,7 +73,7 @@
   background: transparent;
 
   -webkit-appearance: none;
-  appearance: none;
+          appearance: none;
 }
 
 .product-360__middle-range::-webkit-slider-thumb {
@@ -78,13 +83,16 @@
   cursor: grab;
   transition: opacity .3s ease-in-out;
   opacity: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: transparent;
   background-image: url('../img/drag-icon.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 
   -webkit-appearance: none;
-  appearance: none;
+          appearance: none;
 }
 
 /***** Firefox *****/
@@ -95,6 +103,8 @@
   transition: opacity .3s ease-in-out;
   opacity: 1;
   border: none;
+  border-radius: 50%;
+  overflow: hidden;
   background-color: transparent;
   background-image: url('../img/drag-icon.png');
   background-repeat: no-repeat;
@@ -130,7 +140,7 @@
   background: transparent;
 
   -webkit-appearance: none;
-  appearance: none;
+          appearance: none;
 }
 
 .product-360__middle-range-slider::-webkit-slider-runnable-track {
@@ -152,7 +162,7 @@
   background-color: #1d1d1d;
 
   -webkit-appearance: none;
-  appearance: none;
+          appearance: none;
 }
 
 //***** Firefox *****/
