@@ -4,7 +4,7 @@
   margin-bottom: 70px;
 
   @include min(1024) {
-    margin-bottom: 150px;
+    margin-bottom: 40px;
     padding: 30px;
   }
 }
@@ -28,25 +28,6 @@
   @include min(1024) {
     top: 90px;
     width: calc(100% - 180px);
-  }
-}
-
-.product-gallery__header-filter {
-  display: none;
-
-  @include min(768) {
-    display: flex;
-  }
-}
-
-.product-gallery__header-filter-item {
-  flex: none;
-  margin-left: 24px;
-  cursor: pointer;
-  color: rgba(255, 255, 255, .5);
-
-  &.active {
-    color: #fff;
   }
 }
 

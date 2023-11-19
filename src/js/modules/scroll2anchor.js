@@ -1,8 +1,8 @@
 module.exports = function () {
 
   // $(function() {
-  //   $('nav a[href*=\\#]').on("click", function(e){
-  //      // e.preventDefault();
+  //   $('.product-360-header__nav-link[href*=\\#]').on("click", function(e){
+  //      e.preventDefault();
   //      let anchor = $(this);
   //      $('html, body').stop().animate({
   //       scrollTop: $(anchor.attr('href')).offset().top - 0 + 'px'
@@ -10,6 +10,7 @@ module.exports = function () {
   //   });
   //   return false;
   // });
+
   $(function () {
     $('.catalog-body__footer-btn[href*=\\#]').on("click", function (e) {
       e.preventDefault();

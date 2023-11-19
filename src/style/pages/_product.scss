@@ -1,0 +1,9 @@
+.product-inn {
+  .support {
+    padding-top: 60px;
+
+    @include min(1024) {
+      padding-top: 100px;
+    }
+  }
+}

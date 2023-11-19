@@ -18,46 +18,46 @@ mixin item(title)
         p.b-m Підвищення продуктивності: коли ви невимушені, ваш розум процвітає. Відчуйте підвищену продуктивність під час ефективної роботи, не відволікаючись від дискомфорту. Настроювана посадка: створіть крісло відповідно до своїх уподобань. Завдяки регульованим функціям, таким як висота, підлокітники та поперекова підтримка, ви контролюєте своє сидіння.
 
 block content
-  .main-wrap
+  .main-wrap#main-wrap.product
     include ../sections/header
 
     //begin content
     main.main
       include ../sections/product/product-top
-      include ../sections/product/product-tabs
-      include ../sections/product/product-360-header
-      include ../sections/product/product-360
-      include ../sections/product/product-specif
+      .product-inn
+        include ../sections/product/product-header
+        include ../sections/product/product-tabs
+        include ../sections/product/product-360
+        include ../sections/product/product-specif
 
-
-      include ../sections/product/product-gallery
-      //begin support
-      .support
-        //begin support__faq
-        .support__faq.wrapper
-          +item("Де знайти iнструкцiю зi складання товарiв?")
-          +item("Яка гарантiя?")
-          +item("Продукцiя безпечна для здоров’я?")
-          +item("Умови повернення та обмiну товару, якщо вiн не пiдiйшов?")
-          +item("Доставка товару")
-        //end support__faq
-        //begin support__footer
-        .support__footer.wrapper
-          .cta.support__footer-text
-            |не бачите відповіді на ваше запитання?
-            br
-            | Наш менеджер на зв'язку та готовий відповісти на ваші запитання у месенджерах:
-          .support__footer-links
-            a(href='#' target='_blank').support__footer-link
-              +svg('tg')
-            a(href='#' target='_blank').support__footer-link
-              +svg('viber')
-            a(href='#' target='_blank').support__footer-link
-              +svg('whatsapp')
-        //end support__footer
-      //end support
-      include ../sections/home-page/popular-2
-      include ../sections/home-page/inst
+        include ../sections/product/product-gallery
+        //begin support
+        .support#faq.product-section
+          //begin support__faq
+          .support__faq.wrapper
+            +item("Де знайти iнструкцiю зi складання товарiв?")
+            +item("Яка гарантiя?")
+            +item("Продукцiя безпечна для здоров’я?")
+            +item("Умови повернення та обмiну товару, якщо вiн не пiдiйшов?")
+            +item("Доставка товару")
+          //end support__faq
+          //begin support__footer
+          .support__footer.wrapper
+            .cta.support__footer-text
+              | не бачите відповіді на ваше запитання?
+              br
+              | Наш менеджер на зв'язку та готовий відповісти на ваші запитання у месенджерах:
+            .support__footer-links
+              a(href='#' target='_blank').support__footer-link
+                +svg('tg')
+              a(href='#' target='_blank').support__footer-link
+                +svg('viber')
+              a(href='#' target='_blank').support__footer-link
+                +svg('whatsapp')
+          //end support__footer
+        //end support
+        include ../sections/home-page/popular-2
+        include ../sections/home-page/inst
     //end content
 
     include ../sections/footer
