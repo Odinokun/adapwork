@@ -52,10 +52,16 @@ module.exports = function () {
       }
     }
 
-    // Добавляем прослушиватель события прокрутки страницы
-    $(window).on('scroll', scrollNav);
-    // Вызываем функцию один раз сразу, чтобы проверить начальное положение секции
-    scrollNav();
+    const section1 = $('#p-360');
+    const section2 = $('#gallery');
+
+    if (section1.length && section2.length) {
+      // Добавляем прослушиватель события прокрутки страницы
+      $(window).on('scroll', scrollNav);
+      // Вызываем функцию один раз сразу, чтобы проверить начальное положение секции
+      scrollNav();
+    }
+
   });
 
 };

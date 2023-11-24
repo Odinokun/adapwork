@@ -73,18 +73,19 @@
   background: transparent;
 
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 .product-360__middle-range::-webkit-slider-thumb {
+  overflow: hidden;
   width: 100px;
   height: 100px;
-  margin-top: -12px;
+  margin: -12px auto 0;
+  //margin-top: -12px;
   cursor: grab;
   transition: opacity .3s ease-in-out;
   opacity: 1;
   border-radius: 50%;
-  overflow: hidden;
   background-color: transparent;
   background-image: url('../img/drag-icon.png');
   background-repeat: no-repeat;
@@ -92,11 +93,12 @@
   background-size: contain;
 
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 /***** Firefox *****/
 .product-360__middle-range::-moz-range-thumb {
+  overflow: hidden;
   width: 100px;
   height: 100px;
   cursor: grab;
@@ -104,7 +106,6 @@
   opacity: 1;
   border: none;
   border-radius: 50%;
-  overflow: hidden;
   background-color: transparent;
   background-image: url('../img/drag-icon.png');
   background-repeat: no-repeat;
@@ -140,7 +141,7 @@
   background: transparent;
 
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 .product-360__middle-range-slider::-webkit-slider-runnable-track {
@@ -162,7 +163,7 @@
   background-color: #1d1d1d;
 
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 //***** Firefox *****/
