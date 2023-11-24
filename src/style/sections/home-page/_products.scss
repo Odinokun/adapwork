@@ -21,11 +21,12 @@
 }
 
 .products__left {
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding: 60px 10px;
   background-image: url('../img/chairs.jpg');
   background-repeat: no-repeat;
@@ -36,6 +37,7 @@
     padding: 60px 20px;
   }
   @include min(1024) {
+    position: sticky;
     width: 50%;
     padding: 60px 32px;
   }
@@ -59,6 +61,48 @@
 
   @include min(1024) {
     width: 50%;
+  }
+}
+
+.products__right-sequence {
+  position: relative;
+  height: 400vh;
+}
+
+.products__right-canvas-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 620px;
+  transform: translate(-50%, -150%);
+  opacity: 0;
+  padding: 0 16px;
+  transition: opacity 0.3s ease-in-out;
+  @include min(1024) {
+  padding: 0 30px;
+  max-width: 580px;
+  transform: translate(-50%, -100%);
+
+  }
+  &.active {
+    opacity: 1;
+  }
+}
+
+.products__right-canvas {
+  position: sticky;
+  top: 0;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+  height: 100vh;
+
+  canvas {
+    display: block;
   }
 }
 
