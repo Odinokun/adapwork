@@ -48,6 +48,11 @@
   @include min(768) {
     margin: 0 auto;
   }
+
+  canvas{
+    outline: 2px solid red;
+    max-width: 465px;
+  }
 }
 
 .product-360__middle-image-wrap {

@@ -7,6 +7,7 @@ module.exports = [
   './node_modules/gsap/dist/gsap.js',
   './node_modules/gsap/dist/ScrollTrigger.js',
   './node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+  './src/vendors/easyl.js',
 
   // './src/vendors/jquery-ui/jquery-ui.min.js',
   // './node_modules/split-type/dist/index.js'
