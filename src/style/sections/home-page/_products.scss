@@ -66,26 +66,73 @@
 
 .products__right-sequence {
   position: relative;
-  height: 400vh;
+  height: 1000vh;
+}
+
+.products__right-progress {
+  position: fixed;
+  right: 50%;
+  bottom: 0;
+  overflow: hidden;
+  width: 6px;
+  height: 70px;
+  transition: all .5s ease-in-out;
+  transform: rotate(-90deg);
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 3px;
+  background-image: url('../img/progress.png');
+  background-repeat: repeat-y;
+  background-position: 50% 100%;
+  background-size: contain;
+
+  @include min(768) {
+    top: 50vh;
+    right: 30px;
+    transform: translateY(-50%);
+  }
+
+
+  &.fixed {
+    opacity: 1;
+  }
+}
+
+.products__right-progress-scale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  min-height: 15px;
+  border-radius: 3px;
+  background-color: #fff;
 }
 
 .products__right-canvas-text {
   position: absolute;
-  bottom: 0;
-  left: 50%;
+  bottom: 10px;
+  left: 0;
   width: 100%;
   max-width: 620px;
-  transform: translate(-50%, -150%);
+  padding: 0 10px;
+  transition: opacity .5s ease-in-out, transform .01s ease-in-out .51s;
+  transform: translateY(100%);
   opacity: 0;
-  padding: 0 16px;
-  transition: opacity 0.3s ease-in-out;
-  @include min(1024) {
-  padding: 0 30px;
-  max-width: 580px;
-  transform: translate(-50%, -100%);
 
+  @include min(768) {
+    bottom: 20px;
+    padding: 0 20px;
   }
+  @include min(1024) {
+    bottom: 28px;
+    max-width: 580px;
+    padding: 0 32px;
+  }
+
+
   &.active {
+    transition: opacity .5s ease-in-out .5s, transform .65s ease-in-out .5s;
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -93,16 +140,25 @@
 .products__right-canvas {
   position: sticky;
   top: 0;
+  left: 0;
   display: flex;
   overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 99%;
+  width: 100%;
   height: 100vh;
+  img {
+    width: 100%;
+  }
 
   canvas {
     display: block;
+    width: 100%;
+    outline: 2px solid lightgreen;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
   }
 }
 

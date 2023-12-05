@@ -23,7 +23,7 @@ $(function () {
   require('./modules/table')();
   require('./modules/product-menu')();
   require('./modules/product-menu-change-color')();
-  require('./modules/image-anim-01')();
   require('./modules/product-360')();
+  require('./modules/animation-chair')();
 
 });
