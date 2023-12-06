@@ -8,11 +8,11 @@
 
   //begin middle
   .product-360__middle
-    canvas#360viewer(width="1200" height="1800")
-    //.product-360__middle-image-wrap
-    //  img(src="" alt="img").product-360__middle-image
-    //input(type="range" ).product-360__middle-range
-    //input(type="range" ).product-360__middle-range-slider
+    //.product-360__canvas#product-360__canvas(data-images='"assets/img/360/senior-01.jpg", "assets/img/360/senior-02.jpg", "assets/img/360/senior-03.jpg", "assets/img/360/senior-04.jpg", "assets/img/360/senior-05.jpg", "assets/img/360/senior-06.jpg", "assets/img/360/senior-07.jpg", "assets/img/360/senior-08.jpg", "assets/img/360/senior-09.jpg", "assets/img/360/senior-10.jpg", "assets/img/360/senior-11.jpg", "assets/img/360/senior-12.jpg", "assets/img/360/senior-13.jpg", "assets/img/360/senior-14.jpg", "assets/img/360/senior-15.jpg"')
+    .product-360__canvas#product-360__canvas(data-images='assets/img/360/senior-01.jpg, assets/img/360/senior-02.jpg, assets/img/360/senior-03.jpg, assets/img/360/senior-04.jpg, assets/img/360/senior-05.jpg, assets/img/360/senior-06.jpg, assets/img/360/senior-07.jpg, assets/img/360/senior-08.jpg, assets/img/360/senior-09.jpg, assets/img/360/senior-10.jpg, assets/img/360/senior-11.jpg, assets/img/360/senior-12.jpg, assets/img/360/senior-13.jpg, assets/img/360/senior-14.jpg, assets/img/360/senior-15.jpg')
+      canvas#360viewer(width="1200" height="1800")
+      .product-360__canvas-icon
+        img(src="assets/img/360.svg" alt="360 swipe icon")
   //end middle
 
   //begin right
@@ -36,5 +36,4 @@
         .product-360__right-row
           button.btn.btn--dark Купити
   //end right
-
 //end product-360
