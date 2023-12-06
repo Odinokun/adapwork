@@ -1,7 +1,7 @@
 .chat {
   position: fixed;
   right: 10px;
-  bottom: 10px;
+  bottom: 50px;
   width: 36px;
   height: 33px;
   cursor: pointer;
@@ -15,7 +15,6 @@
 
   @include min(768) {
     right: 20px;
-    bottom: 20px;
   }
   @include min(1024) {
     right: 32px;
