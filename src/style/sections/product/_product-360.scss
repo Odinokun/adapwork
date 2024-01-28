@@ -22,6 +22,7 @@
   left: 10px;
   display: block;
   width: 110px;
+  user-select: none;
 
   @include min(768) {
     left: 20px;

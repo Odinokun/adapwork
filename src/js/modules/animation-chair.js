@@ -14,11 +14,19 @@ module.exports = function () {
   if (!sequence_container || !canvas) return;
 
   const context = canvas.getContext("2d");
+  const windowWidth = window.innerWidth;
 
   //TO SET THE NUMBER OF IMAGES
-  const frameCount = 504;
+  const frameCount = 344;
+  let imagePath = '';
+  if (windowWidth >= 1024) {
+    imagePath = 'assets/img/chair/desktop/chair-';
+  } else {
+    imagePath = 'assets/img/chair/mobile/chair-';
+  }
+
   const currentFrame = index => (
-    `assets/img/chair/chair-${index.toString() - 1}.jpg`
+    `${imagePath}${index.toString() - 1}.jpg`
   )
 
   const preloadImages = () => {
@@ -30,8 +38,15 @@ module.exports = function () {
 
   const img = new Image()
   img.src = currentFrame(1);
-  canvas.width = 960;
-  canvas.height = 1080;
+
+  if (windowWidth >= 1024) {
+    canvas.width = 1920;
+    canvas.height = 2160;
+  } else {
+    canvas.width = 960;
+    canvas.height = 1080;
+  }
+
   img.onload = function () {
     context.drawImage(img, 0, 0);
   }
@@ -53,8 +68,12 @@ module.exports = function () {
 
     const viewportHeight = window.innerHeight;
 
-    const minScrollTop = sequence_container.getBoundingClientRect().top - viewportHeight / 2;
-    const maxScrollTop = sequence_container.clientHeight;
+    //start animation
+    // const minScrollTop = sequence_container.getBoundingClientRect().top - viewportHeight / 2;
+    const minScrollTop = sequence_container.getBoundingClientRect().top;
+    //end animation
+    // const maxScrollTop = sequence_container.clientHeight;
+    const maxScrollTop = sequence_container.clientHeight - viewportHeight;
     let scrollFraction = -1 * minScrollTop / maxScrollTop;
 
     if (scrollFraction < 0) {
@@ -79,19 +98,19 @@ module.exports = function () {
     }
 
     //TO SET THE TEXT TRIGGER POINTS
-    if (frameIndex > 0 && frameIndex <= 100) {
+    if (frameIndex > 0 && frameIndex <= 60) {
       removeText();
       text01.classList.add('active');
-    } else if (frameIndex > 100 && frameIndex <= 201) {
+    } else if (frameIndex > 60 && frameIndex <= 161) {
       removeText();
       text02.classList.add('active');
-    } else if (frameIndex > 201 && frameIndex <= 302) {
+    } else if (frameIndex > 161 && frameIndex <= 222) {
       removeText();
       text03.classList.add('active');
-    } else if (frameIndex > 302 && frameIndex <= 403) {
+    } else if (frameIndex > 222 && frameIndex <= 283) {
       removeText();
       text04.classList.add('active');
-    } else if (frameIndex > 403) {
+    } else if (frameIndex > 283) {
       removeText();
       text05.classList.add('active');
     }
