@@ -25,4 +25,5 @@ $(function () {
   require('./modules/product-360')();
   require('./modules/animation-chair')();
   require('./modules/cookies')();
+  require('./modules/parallax')();
 });

@@ -1,0 +1,26 @@
+extends ../_template
+
+block variables
+  - let title       = 'Adapwork'
+  - let description = 'Adapwork website'
+
+block content
+  .main-wrap#main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      .error
+        .error__block
+          .error__numb#parallax
+          .error__numb-mob
+          .error__text.b-m Упс.. Абсолютно нічого не знайдено. Але ви можете спробувати ще раз.
+          a(href="/").btn.error__btn Повернутись на головну
+
+      include ../sections/home-page/inst
+    //end content
+
+    include ../sections/footer
+    include ../sections/basket
+    include ../elements/chat
+    include ../sections/scripts
