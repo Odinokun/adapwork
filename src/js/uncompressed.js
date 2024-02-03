@@ -12,6 +12,7 @@ $(document).ready(function ($) {
     'catalog',
     'product',
     'privacy',
+    'error',
   ]);
 });
 
