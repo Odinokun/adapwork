@@ -1,5 +1,4 @@
 $(function () {
-
   require('./modules/svg4everybody')();
   require('./modules/select')();
   require('./modules/select-error')();
@@ -25,5 +24,5 @@ $(function () {
   require('./modules/product-menu-change-color')();
   require('./modules/product-360')();
   require('./modules/animation-chair')();
-
+  require('./modules/cookies')();
 });
