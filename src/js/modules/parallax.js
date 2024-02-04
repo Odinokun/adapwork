@@ -1,8 +1,9 @@
 module.exports = function () {
+  const elem = document.querySelector('#parallax');
+  if (!elem) return;
   (function () {
     // Add event listener
     document.addEventListener('mousemove', parallax);
-    const elem = document.querySelector('#parallax');
     // Magic happens here
     function parallax(e) {
       let _w = window.innerWidth / 2;
@@ -34,7 +35,7 @@ module.exports = function () {
         50 + (_mouseY - _h) * 0.08
       }%`;
       let x = ` ${_depth8}, ${_depth7}, ${_depth6}, ${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
-      console.log(x);
+      // console.log(x);
       elem.style.backgroundPosition = x;
     }
   })();
