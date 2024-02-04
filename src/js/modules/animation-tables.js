@@ -19,7 +19,7 @@ module.exports = function () {
   const windowWidth = window.innerWidth;
 
   //TO SET THE NUMBER OF IMAGES
-  const frameCount = 344;
+  const frameCount = 364;
   let imagePath = '';
   if (windowWidth >= 1024) {
     imagePath = 'assets/img/tables/desktop/table-';
