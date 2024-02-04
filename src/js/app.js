@@ -23,7 +23,8 @@ $(function () {
   require('./modules/product-menu')();
   require('./modules/product-menu-change-color')();
   require('./modules/product-360')();
-  require('./modules/animation-chair')();
+  require('./modules/animation-chairs')();
+  require('./modules/animation-tables')();
   require('./modules/cookies')();
   require('./modules/parallax')();
 });

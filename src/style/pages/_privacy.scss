@@ -1,5 +1,11 @@
 .privacy {
+  width: 100%;
+  margin: 0 auto;
   margin-bottom: 150px;
+
+  @include min(1024) {
+    width: calc(66.66% + 32px);
+  }
   .h1 {
     margin-bottom: 10px;
 
