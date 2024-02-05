@@ -6,7 +6,6 @@ module.exports = function () {
   const text03 = document.getElementById('tables-text-03');
   const text04 = document.getElementById('tables-text-04');
   const text05 = document.getElementById('tables-text-05');
-  const text06 = document.getElementById('tables-text-06');
 
   const chairs_progress = document.getElementById('tables-progress');
   const chairs_progress_scale = document.getElementById(
@@ -98,24 +97,21 @@ module.exports = function () {
     }
 
     //TO SET THE TEXT TRIGGER POINTS
-    if (frameIndex > 0 && frameIndex <= 60) {
+    if (frameIndex > 0 && frameIndex <= 121) {
       removeText();
       text01.classList.add('active');
-    } else if (frameIndex > 60 && frameIndex <= 121) {
-      removeText();
-      text02.classList.add('active');
     } else if (frameIndex > 121 && frameIndex <= 182) {
       removeText();
-      text03.classList.add('active');
+      text02.classList.add('active');
     } else if (frameIndex > 182 && frameIndex <= 243) {
       removeText();
-      text04.classList.add('active');
+      text03.classList.add('active');
     } else if (frameIndex > 243 && frameIndex <= 304) {
       removeText();
-      text05.classList.add('active');
+      text04.classList.add('active');
     } else if (frameIndex > 304) {
       removeText();
-      text06.classList.add('active');
+      text05.classList.add('active');
     }
     requestAnimationFrame(() => updateImage(frameIndex + 1));
   });
