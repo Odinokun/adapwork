@@ -1,0 +1,150 @@
+.country-popup-layer {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.95;
+  background-color: #1b1b1b;
+}
+
+.country-popup {
+  position: fixed;
+  z-index: 201;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 90%;
+  max-width: 855px;
+  max-height: 95vh;
+  padding: 16px 16px 0 16px;
+  transform: translate(-50%, -50%);
+  background-color: #f5f5f5;
+
+  @include min(768) {
+    padding: 30px 30px 0 30px;
+  }
+}
+
+/* begin HEADER */
+.country-popup__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  @include min(768) {
+    margin-bottom: 30px;
+  }
+}
+
+.country-popup__header-title {
+  color: #0d0d0d;
+}
+
+.country-popup__header-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+
+  @include min(1024) {
+    top: 30px;
+    right: 30px;
+  }
+
+  &:hover {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  svg {
+    fill: #4d4d4d;
+    width: 10px;
+    height: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+/* end   HEADER */
+
+.country-popup__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+
+  gap: 10px;
+  @include min(768) {
+    margin-bottom: 30px;
+
+    gap: 30px;
+  }
+}
+
+.country-popup__item {
+  position: relative;
+  width: calc(50% - 5px);
+
+  @include min(768) {
+    width: calc(33.3333% - 20px);
+  }
+  input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+  }
+}
+
+.country-popup__item--soon {
+  pointer-events: none;
+}
+
+.country-popup__item input:checked + .country-popup__item-inn {
+  border-color: #1b1b1b;
+}
+
+.country-popup__item-inn {
+  display: flex;
+  align-items: center;
+  padding: 22px 16px;
+  border: 1px solid #8e8e8e;
+  border-radius: 2px;
+
+  @include min(768) {
+    padding: 22px 25px;
+  }
+}
+
+.country-popup__item-flag {
+  flex: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.country-popup__item-text {
+  color: #4d4d4d;
+}
+
+.country-popup__soon {
+  padding: 16px 0;
+  color: #000;
+
+  @include min(768) {
+    padding: 30px 0;
+  }
+}
