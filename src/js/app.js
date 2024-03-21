@@ -27,4 +27,5 @@ $(function () {
   require('./modules/animation-tables')();
   require('./modules/cookies')();
   require('./modules/parallax')();
+  require('./modules/country')();
 });

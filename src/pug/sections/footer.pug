@@ -1,4 +1,4 @@
-include ../elements/cookies
+//- include ../elements/cookies
 //begin footer
 footer.footer.wrapper
   //begin footer-top
@@ -8,6 +8,18 @@ footer.footer.wrapper
       a(href="/").footer-top__logo
         img(src="assets/img/logo.svg", alt="Adapwork")
       .footer-top__text.b-s Ми розуміємо вимоги сучасного світу, тому оснащуємо наші вироби передовими технологіями для створення ефективного та адаптивного робочого простору.
+      .footer-top__selects
+        .footer-top__selects-text Ваш регiон:
+        .footer-top__selects-row
+          .footer-top__select-country
+            .footer-top__select-country-icon
+              img(src="assets/img/flags/flag-01.png", alt="flag")
+            .footer-top__select-country-text Україна
+          .footer-top__select-money
+            select
+              option(value="USD") USD
+              option(value="UAH") UAH
+              option(value="EUR") EUR
     //end footer-top__left
 
     //begin footer-top__middle

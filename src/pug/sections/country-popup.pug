@@ -1,0 +1,47 @@
+mixin flag-item(img, title)
+  .country-popup__item
+    input(type='radio' name='country')
+    .country-popup__item-inn
+      .country-popup__item-flag
+        img(src='assets/img/flags/flag-' + img + '.png' alt='flag')
+      .country-popup__item-text.cta= title
+
+// begin country-popup
+.country-popup-layer#country-popup-layer
+.country-popup#country-popup
+  //begin header
+  .country-popup__header
+    h3.country-popup__header-title.h3 Оберiть ваш регiон
+    .country-popup__header-close
+      +svg('delete')
+  //end header
+
+  //begin country-popup__content
+  .country-popup__content
+    .country-popup__item
+      input(type='radio' name='country' checked)
+      .country-popup__item-inn
+        .country-popup__item-flag
+          img(src='assets/img/flags/flag-01.png' alt='flag')
+        .country-popup__item-text.cta Україна
+    +flag-item('02', 'Польща')
+    +flag-item('03', 'Німеччина')
+    +flag-item('04', 'Франція')
+    +flag-item('05', 'Португалія')
+    +flag-item('06', 'Італія')
+  //end country-popup__content
+
+  h4.country-popup__soon.h4 Зовсiм скоро:
+
+  //begin country-popup__content
+  .country-popup__content
+    .country-popup__item.country-popup__item--soon
+      input(type='radio' name='country' checked)
+      .country-popup__item-inn
+        .country-popup__item-flag
+          img(src='assets/img/flags/flag-07.png' alt='flag')
+        .country-popup__item-text.cta Бельгія
+  //end country-popup__content
+
+
+// end country-popup
