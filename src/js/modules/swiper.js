@@ -1,17 +1,16 @@
 module.exports = function () {
-
   // begin Popular slider
-  const popularSlider = new Swiper("#popular-slider", {
+  const popularSlider = new Swiper('#popular-slider', {
     slidesPerView: 1.2,
     spaceBetween: 10,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
     loop: true,
     navigation: {
-      prevEl: ".swiper-btn--prev",
-      nextEl: ".swiper-btn--next",
+      prevEl: '.swiper-btn--prev',
+      nextEl: '.swiper-btn--next',
     },
     breakpoints: {
       560: {
@@ -35,33 +34,32 @@ module.exports = function () {
   // end Popular slider
 
   //begin Gallery slider
-  const galleryThumb = new Swiper("#gallery-thumb-slider", {
-    loop: true,
+  const galleryThumb = new Swiper('#gallery-thumb-slider', {
+    // loop: true,
     spaceBetween: 10,
     slidesPerView: 3.5,
-    centeredSlides: true,
+    // centeredSlides: true,
     breakpoints: {
       560: {
         slidesPerView: 6.5,
       },
       768: {
         slidesPerView: 9,
-      }
+      },
     },
   });
 
-  const gallery = new Swiper("#gallery-slider", {
-    effect: "fade",
-    loop: true,
+  const gallery = new Swiper('#gallery-slider', {
+    effect: 'fade',
+    // loop: true,
     spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-btn--next",
-      prevEl: ".swiper-btn--prev",
-    },
+    // navigation: {
+    //   nextEl: ".swiper-btn--next",
+    //   prevEl: ".swiper-btn--prev",
+    // },
     thumbs: {
       swiper: galleryThumb,
     },
   });
   //end Gallery slider
-
 };
