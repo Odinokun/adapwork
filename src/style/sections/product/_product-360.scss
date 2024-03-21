@@ -1,36 +1,44 @@
 .product-360 {
+  z-index: 100;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
   background-color: #fff;
 
   @include min(768) {
-    display: grid;
-    grid-template-columns: 0 7fr 5fr;
-    grid-gap: 20px;
-  }
-  @include min(1024) {
-    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
   }
 }
 
 /* begin LEFT */
+.product-360__left {
+  width: calc(100% + 20px);
+  margin-bottom: 24px;
+  margin-left: -10px;
+
+  @include min(768) {
+    width: 100%;
+    width: 50%;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
 .product-360__logo {
   position: absolute;
   z-index: 1;
-  top: 100px;
+  top: 20px;
   left: 10px;
   display: block;
   width: 110px;
   user-select: none;
 
   @include min(768) {
-    left: 20px;
+    left: 50px;
   }
   @include min(1024) {
     flex: none;
     width: 100%;
-    max-width: 220px;
+    max-width: 140px;
   }
 
   img {
@@ -38,81 +46,56 @@
     width: 100%;
   }
 }
-
 /* end   LEFT */
-
-/* begin MIDDLE */
-.product-360__middle {
-  margin: 0 auto;
-}
-
-.product-360__canvas {
-  canvas {
-    max-width: 300px;
-    margin-bottom: 20px;
-
-    @include min(375) {
-      max-width: 340px;
-    }
-    @include min(768) {
-      max-width: 400px;
-    }
-    @include min(1200) {
-      max-width: 465px;
-    }
-
-    &:hover {
-      cursor: grab;
-
-      &:active {
-        cursor: grabbing;
-      }
-    }
-  }
-}
-
-.product-360__canvas-icon {
-  position: absolute;
-  top: 116px;
-  right: 10px;
-
-  @include min(768) {
-    position: relative;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  img {
-    display: block;
-    width: 118px;
-    height: 16px;
-  }
-}
-
-/* end   MIDDLE */
 
 /* begin RIGHT */
 .product-360__right {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
   user-select: none;
+
+  @include min(768) {
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 0 32px;
+  }
 }
 
 .product-360__right-title {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   color: #0d0d0d;
+}
+
+.product-360__right-subtitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+  color: #4d4d4d;
+  .catalog-filter__item-row-btn {
+    margin-top: -2px;
+    svg {
+      fill: #4d4d4d !important;
+    }
+  }
 }
 
 .product-360__right-col {
   display: flex;
+  flex-direction: column;
+}
+
+.product-360__right-row-wrapper {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   @include min(768) {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 
@@ -120,6 +103,30 @@
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  .btn {
+    width: 100%;
+
+    @include min(768) {
+      width: auto;
+    }
+  }
+}
+
+.product-360__right-text-color {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16px;
+  span {
+    font-size: 12px;
+    &:first-child {
+      font-weight: 600;
+      color: #1b1b1b;
+    }
+    &:last-child {
+      margin-left: 8px;
+      color: #4d4d4d;
+    }
+  }
 }
 
 .product-360__right-colors {
@@ -134,6 +141,7 @@
   width: 40px;
   height: 40px;
   margin-right: 12px;
+  margin-bottom: 16px;
   border: 1px solid transparent;
   border-radius: 50%;
 
@@ -163,7 +171,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      transition: opacity .15s ease-in-out;
+      transition: opacity 0.15s ease-in-out;
       opacity: 1;
       object-fit: contain;
 
@@ -183,8 +191,47 @@
 }
 
 .product-360__right-price {
-  padding-left: 24px;
+  position: relative;
+  padding-right: 24px;
   color: #0d0d0d;
+  &:last-child {
+    padding-right: 0;
+  }
+  &:nth-child(2) {
+    color: #8e8e8e;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      content: '';
+      transform: rotate(25deg);
+      background-color: #d92020;
+    }
+  }
 }
 
+.product-360__delivery-row {
+  padding-top: 32px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.product-360__delivery {
+  margin-bottom: 16px;
+  color: #4d4d4d;
+}
+
+.product-360__delivery-list {
+  display: flex;
+}
+
+.product-360__delivery-item {
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
 /* end   RIGHT */

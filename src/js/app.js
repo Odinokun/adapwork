@@ -22,7 +22,7 @@ $(function () {
   require('./modules/table')();
   require('./modules/product-menu')();
   require('./modules/product-menu-change-color')();
-  require('./modules/product-360')();
+  // require('./modules/product-360')();
   require('./modules/animation-chairs')();
   require('./modules/animation-tables')();
   require('./modules/cookies')();

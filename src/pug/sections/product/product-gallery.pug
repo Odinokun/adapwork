@@ -13,13 +13,12 @@ mixin slide2()
 
 //begin product-gallery
 .product-gallery#gallery.product-section
-  //begin product-gallery__header
-  .product-gallery__header
-    h2.h2.product-gallery__title Галерея
-  //end product-gallery__header
   //begin gallery-slider
   .gallery-slider#gallery-slider
     .swiper-wrapper
+      .gallery-slider__slide.swiper-slide
+        video(autoplay loop muted playsinline)
+          source(src="assets/video/hero-video.mp4", type="video/mp4")
       +slide()
       +slide2()
       +slide()
@@ -32,7 +31,7 @@ mixin slide2()
       +slide2()
       +slide()
       +slide2()
-    .gallery-slider__btns
+    //- .gallery-slider__btns
       .gallery-slider__btn.swiper-btn.swiper-btn--prev
         +svg('arrow')
       .gallery-slider__btn.swiper-btn.swiper-btn--next
@@ -41,6 +40,8 @@ mixin slide2()
   //begin gallery-thumb-slider
   .gallery-thumb-slider#gallery-thumb-slider
     .swiper-wrapper
+      .gallery-thumb-slider__slide.swiper-slide
+        img(src='assets/img/gallery/thumb/gallery-01.jpg' alt='img')
       .gallery-thumb-slider__slide.swiper-slide
         img(src='assets/img/gallery/thumb/gallery-01.jpg' alt='img')
       .gallery-thumb-slider__slide.swiper-slide
