@@ -15,9 +15,10 @@
 }
 
 .product-scroll-nav__link {
-  transition: opacity .3s ease;
+  user-select: none;
+  transition: opacity 0.3s ease;
   text-decoration: none;
-  opacity: .5;
+  opacity: 0.5;
   color: #f5f5f5;
 
   &.dark {
